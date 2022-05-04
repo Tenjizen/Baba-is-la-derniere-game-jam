@@ -154,6 +154,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _mainGame: {fileID: 1271397346}
+  coordPlayer: {x: 0, y: 0}
 --- !u!212 &137089870
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -213,7 +214,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 137089868}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -2.77, y: 1.86, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 0}
@@ -331,9 +332,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 721207223facb894ea77e73c2851582d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _playerMove: {fileID: 137089869}
   Prefabs:
   - {fileID: 4024561415060174001, guid: 012f32f70b7319740b09665eeaed8920, type: 3}
   - {fileID: 673770088756452073, guid: 37a8068fd1cf3d746980e571c751ef32, type: 3}
+  Player: {fileID: 137089868}
   Size: 10
   Distance: 0.64
 --- !u!4 &1271397347

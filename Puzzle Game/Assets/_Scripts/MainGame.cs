@@ -5,8 +5,9 @@ using DG.Tweening;
 
 public class MainGame : MonoBehaviour
 {
-
+    [SerializeField] PlayerMove _playerMove;
     public GameObject[] Prefabs;
+    public GameObject Player;
     public int Size = 10;
     public float Distance = 1;
 
@@ -16,6 +17,9 @@ public class MainGame : MonoBehaviour
     IEnumerator Start()
     {
         map = new int[Size, Size];
+
+        Player.transform.position = new Vector2((_playerMove.coordPlayer.x - Size / 2) * Distance, (_playerMove.coordPlayer.y - Size / 2) * Distance);//pop player en bas a gauche
+
         for (int x = 0; x < Size; x++)
         {
             for (int y = 0; y < Size; y++)
