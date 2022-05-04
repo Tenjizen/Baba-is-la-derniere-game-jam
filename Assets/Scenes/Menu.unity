@@ -320,17 +320,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &280448678 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5103459787873964529, guid: f0d78aec4f9f4a14890dd2f39c3c94dc, type: 3}
-  m_PrefabInstance: {fileID: 768950304}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &404186451
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -956,11 +945,9 @@ MonoBehaviour:
   audioSourceMusic: {fileID: 730479312}
   audioSourceSFX: {fileID: 730479311}
   audioClips: []
-  sliderMusic: {fileID: 280448678}
-  sliderSFX: {fileID: 1437302748}
   coroutine: 0
-  m_sliderMusicValue: 0.3
-  m_sliderSfxValue: 0.3
+  m_sliderMusicValue: 0.5
+  m_sliderSfxValue: 0.5
 --- !u!4 &730479314
 Transform:
   m_ObjectHideFlags: 0
@@ -993,6 +980,10 @@ PrefabInstance:
     - target: {fileID: 628661250, guid: f0d78aec4f9f4a14890dd2f39c3c94dc, type: 3}
       propertyPath: m_hasFontAssetChanged
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 817887293, guid: f0d78aec4f9f4a14890dd2f39c3c94dc, type: 3}
+      propertyPath: m_Value
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 817887293, guid: f0d78aec4f9f4a14890dd2f39c3c94dc, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -1079,9 +1070,17 @@ PrefabInstance:
       value: 0.29993
       objectReference: {fileID: 0}
     - target: {fileID: 5103459787873964529, guid: f0d78aec4f9f4a14890dd2f39c3c94dc, type: 3}
+      propertyPath: m_Value
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5103459787873964529, guid: f0d78aec4f9f4a14890dd2f39c3c94dc, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 730479313}
+    - target: {fileID: 5103459787873964529, guid: f0d78aec4f9f4a14890dd2f39c3c94dc, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5103459787873964529, guid: f0d78aec4f9f4a14890dd2f39c3c94dc, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SetMusicLevel
@@ -1298,17 +1297,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &1437302748 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 817887293, guid: f0d78aec4f9f4a14890dd2f39c3c94dc, type: 3}
-  m_PrefabInstance: {fileID: 768950304}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1487298879
 PrefabInstance:
   m_ObjectHideFlags: 0
