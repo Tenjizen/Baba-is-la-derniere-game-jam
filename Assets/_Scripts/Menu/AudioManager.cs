@@ -11,14 +11,11 @@ public class AudioManager : MonoBehaviour
 
     public AudioClip[] audioClips;
 
-    public Slider sliderMusic;
-    public Slider sliderSFX;
-
     [HideInInspector] public bool coroutine = false;
     //public float step = 1f;
 
-    public float m_sliderMusicValue = 0.3f;
-    public float m_sliderSfxValue = 0.3f;
+    public float m_sliderMusicValue;
+    public float m_sliderSfxValue;
 
     public static AudioManager Instance;
 
@@ -28,21 +25,19 @@ public class AudioManager : MonoBehaviour
         DontDestroyOnLoad(this.gameObject);
         SetMusicLevel(m_sliderMusicValue);
         SetSFXLevel(m_sliderSfxValue);
-        sliderMusic.value = m_sliderMusicValue;
-        sliderSFX.value = m_sliderSfxValue;
     }
-
+   
     public void SetMusicLevel(float sliderValue)
     {
         m_sliderMusicValue = sliderValue;
         mixer.SetFloat("MusicVolume", Mathf.Log10(sliderValue) * 20);
+        
         //Debug.Log(sliderValue);
     }
     public void SetSFXLevel(float sliderValue)
     {
         m_sliderSfxValue = sliderValue;
         mixer.SetFloat("SFXVolume", Mathf.Log10(sliderValue) * 20);
-
         //Debug.Log(sliderValue);
     }
     public void PlayMusicSound(string name)
