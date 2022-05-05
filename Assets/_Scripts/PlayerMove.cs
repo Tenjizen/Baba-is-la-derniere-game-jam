@@ -15,72 +15,74 @@ public class PlayerMove : MonoBehaviour
     }
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Z))
+        if (!_mainGame.pause)
         {
-            var pos = transform.position;
-
-            if (_mainGame.map[coordPlayer.x, coordPlayer.y + 1] == 1)
+            if (Input.GetKeyDown(KeyCode.Z))
             {
-                print("mur en haut");
-            }
-            //else if (_mainGame.map[coordPlayer.x, coordPlayer.y + 1] == 2)
-            //{
+                var pos = transform.position;
 
-            //}
-            else
+                if (_mainGame.map[coordPlayer.x, coordPlayer.y + 1] == 1)
+                {
+                    print("mur en haut");
+                }
+                //else if (_mainGame.map[coordPlayer.x, coordPlayer.y + 1] == 2)
+                //{
+
+                //}
+                else
+                {
+                    pos = new Vector2(pos.x, pos.y + _mainGame.Distance);
+                    transform.position = pos;
+                    coordPlayer.y++;
+                }
+
+
+            }
+            else if (Input.GetKeyDown(KeyCode.S))
             {
-                pos = new Vector2(pos.x, pos.y + _mainGame.Distance);
-                transform.position = pos;
-                coordPlayer.y++;
+                var pos = transform.position;
+                if (_mainGame.map[coordPlayer.x, coordPlayer.y - 1] == 1)
+                {
+                    print("mur en bas");
+                }
+
+                else
+                {
+                    pos = new Vector2(pos.x, pos.y - _mainGame.Distance);
+                    transform.position = pos;
+                    coordPlayer.y--;
+                }
             }
+            else if (Input.GetKeyDown(KeyCode.Q))
+            {
+                var pos = transform.position;
 
+                if (_mainGame.map[coordPlayer.x - 1, coordPlayer.y] == 1)
+                {
+                    print("mur a gauche");
+                }
+                else
+                {
+                    pos = new Vector2(pos.x - _mainGame.Distance, pos.y);
+                    transform.position = pos;
+                    coordPlayer.x--;
+                }
+            }
+            else if (Input.GetKeyDown(KeyCode.D))
+            {
+                var pos = transform.position;
 
+                if (_mainGame.map[coordPlayer.x + 1, coordPlayer.y] == 1)
+                {
+                    print("mur a droite");
+                }
+                else
+                {
+                    pos = new Vector2(pos.x + _mainGame.Distance, pos.y);
+                    transform.position = pos;
+                    coordPlayer.x++;
+                }
+            }
         }
-        else if (Input.GetKeyDown(KeyCode.S))
-        {
-            var pos = transform.position;
-            if (_mainGame.map[coordPlayer.x, coordPlayer.y - 1] == 1)
-            {
-                print("mur en bas");
-            }
-
-            else
-            {
-                pos = new Vector2(pos.x, pos.y - _mainGame.Distance);
-                transform.position = pos;
-                coordPlayer.y--;
-            }
-        }
-        else if (Input.GetKeyDown(KeyCode.Q))
-        {
-            var pos = transform.position;
-
-            if (_mainGame.map[coordPlayer.x - 1, coordPlayer.y] == 1)
-            {
-                print("mur a gauche");
-            }
-            else
-            {
-                pos = new Vector2(pos.x - _mainGame.Distance, pos.y);
-                transform.position = pos;
-                coordPlayer.x--;
-            }
-        }
-        else if (Input.GetKeyDown(KeyCode.D))
-        {
-            var pos = transform.position;
-
-            if (_mainGame.map[coordPlayer.x + 1, coordPlayer.y] == 1)
-            {
-                print("mur a droite");
-            }
-            else
-            {
-                pos = new Vector2(pos.x + _mainGame.Distance, pos.y);
-                transform.position = pos;
-                coordPlayer.x++;
-            }
-        }
-
     }
 }

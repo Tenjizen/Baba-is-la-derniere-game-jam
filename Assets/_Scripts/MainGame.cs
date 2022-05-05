@@ -14,6 +14,8 @@ public class MainGame : MonoBehaviour
 
     public int[,] map;
 
+    public bool pause = false;
+
     IEnumerator Start()
     {
         map = new int[Size, Size];
