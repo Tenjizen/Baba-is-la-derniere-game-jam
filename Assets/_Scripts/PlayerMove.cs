@@ -9,7 +9,10 @@ public class PlayerMove : MonoBehaviour
     public Vector2Int coordPlayer;
     private void Start()
     {
-        coordPlayer = new Vector2Int(1, 1);
+        //personnalisé
+        //coordPlayer = new Vector2Int(coordPlayer.x, coordPlayer.y);
+        
+        //coordPlayer = new Vector2Int((_mainGame.Size - (_mainGame.Size - 1)), (_mainGame.Size - (_mainGame.Size - 1))); //en bas a gauche
         //this.transform.position = new Vector2((coordPlayer.x - _mainGame.Size / 2) * _mainGame.Distance, (coordPlayer.y - _mainGame.Size / 2) * _mainGame.Distance);
 
     }
