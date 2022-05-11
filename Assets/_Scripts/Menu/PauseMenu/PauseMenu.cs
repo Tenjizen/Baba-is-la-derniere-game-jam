@@ -30,7 +30,7 @@ public class PauseMenu : MonoBehaviour
                 credits.activeInHierarchy == false)
             {
                 accueilPause.SetActive(!accueilPause.activeSelf);
-                _mainGame.pause = accueilPause.activeSelf;
+                _mainGame.Pause = accueilPause.activeSelf;
             }
         }
         //if (pause)
@@ -45,7 +45,7 @@ public class PauseMenu : MonoBehaviour
     public void OnClickResume()
     {
         accueilPause.SetActive(false);
-        _mainGame.pause = false;
+        _mainGame.Pause = false;
     }
     public void OnClickRestart()
     {
