@@ -123,6 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &137089868 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3419310036288584394, guid: 36b6fa6312a9ac741afb118e1bc45378, type: 3}
+  m_PrefabInstance: {fileID: 3419310036151921030}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &256202545
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -525,6 +530,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &655146722 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3419310036288584394, guid: 36b6fa6312a9ac741afb118e1bc45378, type: 3}
+  m_PrefabInstance: {fileID: 1554287188}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &717860938
 GameObject:
   m_ObjectHideFlags: 0
@@ -1144,9 +1154,21 @@ MonoBehaviour:
   Prefabs:
   - {fileID: 4024561415060174001, guid: 012f32f70b7319740b09665eeaed8920, type: 3}
   - {fileID: 673770088756452073, guid: 37a8068fd1cf3d746980e571c751ef32, type: 3}
+  - {fileID: 6391753494247570012, guid: e0501d04027473f478b2b23dd4a4585e, type: 3}
+  PrefabsPlayer:
+  - {fileID: 137089868}
+  - {fileID: 655146722}
   Size: 10
   Distance: 0.64
   PtsSpawn: 1
+  PosWall:
+  - {x: 5, y: 5}
+  - {x: 4, y: 5}
+  - {x: 3, y: 5}
+  - {x: 2, y: 2}
+  PosCaisse:
+  - {x: 3, y: 3}
+  - {x: 6, y: 6}
   Pause: 0
 --- !u!4 &1271397347
 Transform:
@@ -1766,15 +1788,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3419310036288584393, guid: 36b6fa6312a9ac741afb118e1bc45378, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 3419310036288584393, guid: 36b6fa6312a9ac741afb118e1bc45378, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 3419310036288584393, guid: 36b6fa6312a9ac741afb118e1bc45378, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 3419310036288584393, guid: 36b6fa6312a9ac741afb118e1bc45378, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1790,7 +1812,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3419310036288584394, guid: 36b6fa6312a9ac741afb118e1bc45378, type: 3}
       propertyPath: m_Name
-      value: Player (1)
+      value: PlayerMirror
+      objectReference: {fileID: 0}
+    - target: {fileID: 3419310036288584394, guid: 36b6fa6312a9ac741afb118e1bc45378, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3419310036288584395, guid: 36b6fa6312a9ac741afb118e1bc45378, type: 3}
       propertyPath: Mirror

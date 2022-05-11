@@ -8,6 +8,7 @@ public class PlayerMove : MonoBehaviour
     [SerializeField] MainGame _mainGame;
     public bool Mirror;
     public Vector2Int coordPlayer;
+    //public Vector2Int coordMirrorPlayer;
     private void Start()
     {
         Spawn();
@@ -29,6 +30,7 @@ public class PlayerMove : MonoBehaviour
 
             if (_mainGame.Map[coordPlayer.x, coordPlayer.y + 1] == 1)
             {
+                CheckAfterMove();
                 print("mur en haut");
             }
             //else if (_mainGame.map[coordPlayer.x, coordPlayer.y + 1] == 2)
@@ -40,6 +42,7 @@ public class PlayerMove : MonoBehaviour
                 pos = new Vector2(pos.x, pos.y + _mainGame.Distance);
                 transform.position = pos;
                 coordPlayer.y++;
+                CheckAfterMove();
             }
         }
         else if (Input.GetKeyDown(KeyCode.S))
@@ -47,14 +50,19 @@ public class PlayerMove : MonoBehaviour
             var pos = transform.position;
             if (_mainGame.Map[coordPlayer.x, coordPlayer.y - 1] == 1)
             {
+                CheckAfterMove();
                 print("mur en bas");
             }
+            //else if (_mainGame.map[coordPlayer.x, coordPlayer.y + 1] == 2)
+            //{
 
+            //}
             else
             {
                 pos = new Vector2(pos.x, pos.y - _mainGame.Distance);
                 transform.position = pos;
                 coordPlayer.y--;
+                CheckAfterMove();
             }
         }
         if (!Mirror)
@@ -66,6 +74,7 @@ public class PlayerMove : MonoBehaviour
 
                 if (_mainGame.Map[coordPlayer.x - 1, coordPlayer.y] == 1)
                 {
+                    CheckAfterMove();
                     print("mur a gauche");
                 }
                 else
@@ -73,6 +82,7 @@ public class PlayerMove : MonoBehaviour
                     pos = new Vector2(pos.x - _mainGame.Distance, pos.y);
                     transform.position = pos;
                     coordPlayer.x--;
+                    CheckAfterMove();
                 }
             }
             else if (Input.GetKeyDown(KeyCode.D))
@@ -81,6 +91,7 @@ public class PlayerMove : MonoBehaviour
 
                 if (_mainGame.Map[coordPlayer.x + 1, coordPlayer.y] == 1)
                 {
+                    CheckAfterMove();
                     print("mur a droite");
                 }
                 else
@@ -88,6 +99,7 @@ public class PlayerMove : MonoBehaviour
                     pos = new Vector2(pos.x + _mainGame.Distance, pos.y);
                     transform.position = pos;
                     coordPlayer.x++;
+                    CheckAfterMove();
                 }
             }
         }
@@ -99,6 +111,7 @@ public class PlayerMove : MonoBehaviour
 
                 if (_mainGame.Map[coordPlayer.x + 1, coordPlayer.y] == 1)
                 {
+                    CheckAfterMove();
                     print("mur a gauche");
                 }
                 else
@@ -106,6 +119,7 @@ public class PlayerMove : MonoBehaviour
                     pos = new Vector2(pos.x + _mainGame.Distance, pos.y);
                     transform.position = pos;
                     coordPlayer.x++;
+                    CheckAfterMove();
                 }
             }
             else if (Input.GetKeyDown(KeyCode.D))
@@ -114,6 +128,7 @@ public class PlayerMove : MonoBehaviour
 
                 if (_mainGame.Map[coordPlayer.x - 1, coordPlayer.y] == 1)
                 {
+                    CheckAfterMove();
                     print("mur a droite");
                 }
                 else
@@ -121,14 +136,33 @@ public class PlayerMove : MonoBehaviour
                     pos = new Vector2(pos.x - _mainGame.Distance, pos.y);
                     transform.position = pos;
                     coordPlayer.x--;
+                    CheckAfterMove();
                 }
             }
         }
-        CheckAfterMove();
-    }   
+
+    }
     void CheckAfterMove()
     {
-      
+        //_mainGame.Map[coordPlayer.x - 1, coordPlayer.y]
+        if (_mainGame.PrefabsPlayer.Length > 1)
+        {
+            if (_mainGame.PrefabsPlayer[1] != null)
+            {
+                var posPlayerZero = _mainGame.PrefabsPlayer[0].transform.position;
+                var posPlayerUno = _mainGame.PrefabsPlayer[1].transform.position;
+                if (posPlayerZero.x == posPlayerUno.x - _mainGame.Distance && posPlayerZero.y == posPlayerUno.y)
+                    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+
+
+
+                if (_mainGame.PrefabsPlayer[1] == this.gameObject)
+                {
+                    if (posPlayerZero == posPlayerUno)
+                        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+                }
+            }
+        }
     }
     void CoordPlayerSpawn()
     {
