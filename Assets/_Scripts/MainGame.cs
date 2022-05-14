@@ -5,7 +5,6 @@ using DG.Tweening;
 
 public class MainGame : MonoBehaviour
 {
-    //[SerializeField] PlayerMove _playerMove;
     //public GameObject Player;
     //public GameObject PlayerMirror;
     public GameObject[] Prefabs;
@@ -16,12 +15,14 @@ public class MainGame : MonoBehaviour
 
     public int[,] Map;
     public Vector2Int[] PosWall;
+    /*[HideInInspector]*/public List<Caisse> _caisse;
     public Vector2Int[] PosCaisse;
     public bool Pause = false;
 
 
     IEnumerator Start()
     {
+
         
         foreach (var item in PrefabsPlayer)
         {
@@ -54,24 +55,41 @@ public class MainGame : MonoBehaviour
                 GameObject go = GameObject.Instantiate(Prefabs[Map[x, y]]);
                 go.transform.position = new Vector3(x * Distance, y * Distance) - offset;
                 go.transform.localScale = Vector3.zero;
-
                 go.transform.DOScale(1, 0.3f);
             }
             yield return new WaitForSeconds(0.05f);
         }
 
         //test
-        foreach (var posCaisse in PosCaisse)
+        for (int i = 0; i < PosCaisse.Length; i++)
+        {
+            PosPrefab(PosCaisse[i], 2);
+            GameObject go2 = GameObject.Instantiate(Prefabs[Map[PosCaisse[i].x, PosCaisse[i].y]]);
+            _caisse.Add(FindObjectOfType<Caisse>());
+            go2.transform.position = new Vector3(PosCaisse[i].x * Distance, PosCaisse[i].y * Distance) - offset;
+            go2.transform.localScale = Vector3.zero;
+
+            _caisse[i].coordCaisse = new Vector2Int(PosCaisse[i].x, PosCaisse[i].y);
+
+            go2.transform.DOScale(0.5f, 0.3f);
+            yield return new WaitForSeconds(0.05f);
+        }
+
+
+
+
+       /* foreach (var posCaisse in PosCaisse)
         {
             PosPrefab(posCaisse, 2);
             GameObject go2 = GameObject.Instantiate(Prefabs[Map[posCaisse.x, posCaisse.y]]);    
+                _caisse.Add(FindObjectOfType<Caisse>());
             go2.transform.position = new Vector3(posCaisse.x * Distance, posCaisse.y * Distance) - offset;
             go2.transform.localScale = Vector3.zero;
 
             go2.transform.DOScale(0.5f, 0.3f);
             yield return new WaitForSeconds(0.05f);
 
-        }
+        }*/
         //end test
         
         foreach (var item in PrefabsPlayer)
