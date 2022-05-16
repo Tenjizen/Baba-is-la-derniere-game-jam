@@ -15,10 +15,12 @@ public class MainGame : MonoBehaviour
 
     public int[,] Map;
     public Vector2Int[] PosWall;
-    /*[HideInInspector]*/public List<Caisse> _caisse;
+    [HideInInspector]public List<Caisse> _caisse;
     public Vector2Int[] PosCaisse;
+    //public Vector2Int[] PosScie;
     public bool Pause = false;
 
+    public List<ScieBase> List = new List<ScieBase>();
 
     IEnumerator Start()
     {

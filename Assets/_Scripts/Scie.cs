@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+
 public class Scie : MonoBehaviour
 {
     [SerializeField] MainGame _mainGame;
@@ -20,6 +22,24 @@ public class Scie : MonoBehaviour
     private void Start()
     {
         _mainGame = FindObjectOfType<MainGame>();
+
+       for (int i = 0; i < _mainGame.List.Count; i++)
+        {
+            coordScie = _mainGame.List[i].coordBaseScie;
+
+            targetUp = _mainGame.List[i].targetBaseUp;
+            targetDown = _mainGame.List[i].targetBaseDown;
+            targetRight = _mainGame.List[i].targetBaseRight;
+            targetLeft = _mainGame.List[i].targetBaseLeft;
+
+            var jhgjd = (int)_mainGame.List[i].stateBase;
+            state = 0;
+            while (jhgjd != (int)state)
+            {
+                state += 1;
+            }
+        }
+
     }
 
 
@@ -79,29 +99,5 @@ public class Scie : MonoBehaviour
                 break;
         }
 
-
-
-        //if (stat == 0)
-        //{
-        //    coordScie.y++;
-        //    posScie = new Vector2(posScie.x, posScie.y + _mainGame.Distance);
-        //    transform.position = posScie;
-        //    coordScie.y++;
-        //}
-        //else if (stat == 1)
-        //{
-
-        //    coordScie.y--;
-        //}
-        //else if (stat == 2)
-        //{
-        //    coordScie.x++;
-
-        //}
-        //else if (stat == 3)
-        //{
-        //    coordScie.x--;
-
-        //}
     }
 }

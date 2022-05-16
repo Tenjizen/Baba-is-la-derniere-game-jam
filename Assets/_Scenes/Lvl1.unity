@@ -1167,6 +1167,13 @@ MonoBehaviour:
   - {x: 3, y: 3}
   - {x: 6, y: 6}
   Pause: 0
+  List:
+  - coordBaseScie: {x: 2, y: 4}
+    targetBaseUp: 6
+    targetBaseDown: 4
+    targetBaseRight: 1
+    targetBaseLeft: 3
+    stateBase: 0
 --- !u!4 &1271397347
 Transform:
   m_ObjectHideFlags: 0
