@@ -42,7 +42,6 @@ public class MainGame : MonoBehaviour
         }
         Vector3 offset = new Vector3((Size * Distance) / 2, (Size * Distance) / 2);
 
-        //GameObject.Instantiate(Prefabs[Map[5,5]]);
         foreach (var pos in PosWall)
         {
             PosPrefab(pos, 1);
@@ -60,7 +59,6 @@ public class MainGame : MonoBehaviour
             yield return new WaitForSeconds(0.05f);
         }
 
-        //test
         for (int i = 0; i < PosCaisse.Length; i++)
         {
             PosPrefab(PosCaisse[i], 2);
@@ -75,22 +73,6 @@ public class MainGame : MonoBehaviour
             yield return new WaitForSeconds(0.05f);
         }
 
-
-
-
-       /* foreach (var posCaisse in PosCaisse)
-        {
-            PosPrefab(posCaisse, 2);
-            GameObject go2 = GameObject.Instantiate(Prefabs[Map[posCaisse.x, posCaisse.y]]);    
-                _caisse.Add(FindObjectOfType<Caisse>());
-            go2.transform.position = new Vector3(posCaisse.x * Distance, posCaisse.y * Distance) - offset;
-            go2.transform.localScale = Vector3.zero;
-
-            go2.transform.DOScale(0.5f, 0.3f);
-            yield return new WaitForSeconds(0.05f);
-
-        }*/
-        //end test
         
         foreach (var item in PrefabsPlayer)
         {
