@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Caisse : MonoBehaviour
+public class Box : MonoBehaviour
 {
-    public Vector2Int coordCaisse;
+    public Vector2Int CoordBox;
 }

@@ -1146,47 +1146,59 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 721207223facb894ea77e73c2851582d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Pause: 0
   Prefabs:
   - {fileID: 4024561415060174001, guid: 012f32f70b7319740b09665eeaed8920, type: 3}
   - {fileID: 673770088756452073, guid: 37a8068fd1cf3d746980e571c751ef32, type: 3}
   - {fileID: 6391753494247570012, guid: e0501d04027473f478b2b23dd4a4585e, type: 3}
   - {fileID: 4687153662166908459, guid: 758246ee43f353940a9a843f574e4593, type: 3}
   - {fileID: 137089868}
+  - {fileID: 7535539189316516778, guid: 46916ac8bc2199141b4f212f96e02d8b, type: 3}
   PrefabsPlayer:
   - {fileID: 137089868}
-  Size: 10
+  Height: 10
+  Width: 0
   Distance: 0.64
   PtsSpawn: 1
   PosWall:
-  - {x: 5, y: 5}
   - {x: 4, y: 5}
   - {x: 3, y: 5}
   - {x: 2, y: 2}
-  _caisse: []
-  PosCaisse:
-  - {x: 3, y: 3}
-  - {x: 6, y: 6}
-  Pause: 0
+  PosBox:
+  - {x: 2, y: 3}
+  - {x: 5, y: 6}
   ListSaw:
-  - coordBaseScie: {x: 8, y: 8}
-    targetBaseUp: 8
-    targetBaseDown: 5
-    targetBaseRight: 0
-    targetBaseLeft: 0
-    stateBase: 1
-  - coordBaseScie: {x: 7, y: 7}
-    targetBaseUp: 8
-    targetBaseDown: 5
-    targetBaseRight: 0
-    targetBaseLeft: 0
-    stateBase: 1
-  - coordBaseScie: {x: 6, y: 8}
-    targetBaseUp: 0
-    targetBaseDown: 0
-    targetBaseRight: 6
-    targetBaseLeft: 3
-    stateBase: 2
-  _saw: []
+  - CoordBaseSaw: {x: 8, y: 8}
+    TargetBaseUp: 8
+    TargetBaseDown: 5
+    TargetBaseRight: 0
+    TargetBaseLeft: 0
+    EnumStateBase: 1
+  - CoordBaseSaw: {x: 7, y: 6}
+    TargetBaseUp: 8
+    TargetBaseDown: 5
+    TargetBaseRight: 0
+    TargetBaseLeft: 0
+    EnumStateBase: 1
+  - CoordBaseSaw: {x: 6, y: 8}
+    TargetBaseUp: 0
+    TargetBaseDown: 0
+    TargetBaseRight: 6
+    TargetBaseLeft: 4
+    EnumStateBase: 2
+  ListTreadmill:
+  - CoordBaseTreadmill: {x: 6, y: 3}
+    EnumStateBase: 0
+  - CoordBaseTreadmill: {x: 5, y: 4}
+    EnumStateBase: 2
+  - CoordBaseTreadmill: {x: 4, y: 4}
+    EnumStateBase: 2
+  - CoordBaseTreadmill: {x: 3, y: 4}
+    EnumStateBase: 1
+  Player: []
+  Box: []
+  Saw: []
+  Treadmill: []
 --- !u!4 &1271397347
 Transform:
   m_ObjectHideFlags: 0
@@ -1214,10 +1226,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _mainGame: {fileID: 1271397346}
-  accueilPause: {fileID: 301823362}
-  parameter: {fileID: 812513566}
-  controls: {fileID: 764537037}
-  credits: {fileID: 1555613063}
+  AccueilPause: {fileID: 301823362}
+  Parameter: {fileID: 812513566}
+  Controls: {fileID: 764537037}
+  Credits: {fileID: 1555613063}
 --- !u!1001 &1390162322
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -7,30 +7,30 @@ public class PauseMenu : MonoBehaviour
 {
     [SerializeField] MainGame _mainGame;
     
-    public GameObject accueilPause;
-    public GameObject parameter;
-    public GameObject controls;
-    public GameObject credits;
+    public GameObject AccueilPause;
+    public GameObject Parameter;
+    public GameObject Controls;
+    public GameObject Credits;
 
     //public bool pause = false;
     void Awake()
     {
-        accueilPause.SetActive(false);
-        parameter.SetActive(false);
-        controls.SetActive(false);
-        credits.SetActive(false);
+        AccueilPause.SetActive(false);
+        Parameter.SetActive(false);
+        Controls.SetActive(false);
+        Credits.SetActive(false);
     }
 
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (parameter.activeInHierarchy == false &&
-                controls.activeInHierarchy == false &&
-                credits.activeInHierarchy == false)
+            if (Parameter.activeInHierarchy == false &&
+                Controls.activeInHierarchy == false &&
+                Credits.activeInHierarchy == false)
             {
-                accueilPause.SetActive(!accueilPause.activeSelf);
-                _mainGame.Pause = accueilPause.activeSelf;
+                AccueilPause.SetActive(!AccueilPause.activeSelf);
+                _mainGame.Pause = AccueilPause.activeSelf;
             }
         }
         //if (pause)
@@ -44,7 +44,7 @@ public class PauseMenu : MonoBehaviour
     }
     public void OnClickResume()
     {
-        accueilPause.SetActive(false);
+        AccueilPause.SetActive(false);
         _mainGame.Pause = false;
     }
     public void OnClickRestart()
@@ -53,31 +53,31 @@ public class PauseMenu : MonoBehaviour
     }
     public void OnClickParameter()
     {
-        accueilPause.SetActive(false);
-        parameter.SetActive(true);
+        AccueilPause.SetActive(false);
+        Parameter.SetActive(true);
     }
     public void OnClickCredits()
     {
-        accueilPause.SetActive(false);
-        credits.SetActive(true);
+        AccueilPause.SetActive(false);
+        Credits.SetActive(true);
     }
     public void OnClickControls()
     {
-        controls.SetActive(true);
-        parameter.SetActive(false);
+        Controls.SetActive(true);
+        Parameter.SetActive(false);
     }
     public void OnClickReturn()
     {
-        if (controls.activeInHierarchy == true)
+        if (Controls.activeInHierarchy == true)
         {
-            controls.SetActive(!controls);
-            parameter.SetActive(true);
+            Controls.SetActive(!Controls);
+            Parameter.SetActive(true);
         }
         else
         {
-            accueilPause.SetActive(true);
-            credits.SetActive(false);
-            parameter.SetActive(false);
+            AccueilPause.SetActive(true);
+            Credits.SetActive(false);
+            Parameter.SetActive(false);
         }
     }
     public void OnClickLeave()
