@@ -37,13 +37,10 @@ public class PlayerMove : MonoBehaviour
             }
             else
             {
-                if (_mainGame.Map[coordPlayer.x, coordPlayer.y + 1] == 0)
-                {
                     posPlayer = new Vector2(posPlayer.x, posPlayer.y + _mainGame.Distance);
                     transform.position = posPlayer;
                     coordPlayer.y++;
                     CheckAfterMove();
-                }
             }
         }
         else if (Input.GetKeyDown(KeyCode.S))
@@ -60,13 +57,10 @@ public class PlayerMove : MonoBehaviour
             }
             else
             {
-                if (_mainGame.Map[coordPlayer.x, coordPlayer.y - 1] == 0)
-                {
                     pos = new Vector2(pos.x, pos.y - _mainGame.Distance);
                     transform.position = pos;
                     coordPlayer.y--;
                     CheckAfterMove();
-                }
             }
         }
         if (!Mirror)
@@ -87,13 +81,10 @@ public class PlayerMove : MonoBehaviour
                 }
                 else
                 {
-                    if (_mainGame.Map[coordPlayer.x - 1, coordPlayer.y] == 0)
-                    {
                         pos = new Vector2(pos.x - _mainGame.Distance, pos.y);
                         transform.position = pos;
                         coordPlayer.x--;
                         CheckAfterMove();
-                    }
                 }
             }
             else if (Input.GetKeyDown(KeyCode.D))
@@ -111,13 +102,12 @@ public class PlayerMove : MonoBehaviour
                 }
                 else
                 {
-                    if (_mainGame.Map[coordPlayer.x + 1, coordPlayer.y] == 0)
-                    {
-                        pos = new Vector2(pos.x + _mainGame.Distance, pos.y);
-                        transform.position = pos;
-                        coordPlayer.x++;
-                        CheckAfterMove();
-                    }
+
+                    pos = new Vector2(pos.x + _mainGame.Distance, pos.y);
+                    transform.position = pos;
+                    coordPlayer.x++;
+                    CheckAfterMove();
+
                 }
             }
         }
@@ -138,13 +128,10 @@ public class PlayerMove : MonoBehaviour
                 }
                 else
                 {
-                    if (_mainGame.Map[coordPlayer.x + 1, coordPlayer.y] == 0)
-                    {
-                        pos = new Vector2(pos.x + _mainGame.Distance, pos.y);
-                        transform.position = pos;
-                        coordPlayer.x++;
-                        CheckAfterMove();
-                    }
+                    pos = new Vector2(pos.x + _mainGame.Distance, pos.y);
+                    transform.position = pos;
+                    coordPlayer.x++;
+                    CheckAfterMove();
                 }
             }
             else if (Input.GetKeyDown(KeyCode.D))
@@ -163,13 +150,10 @@ public class PlayerMove : MonoBehaviour
                 }
                 else
                 {
-                    if (_mainGame.Map[coordPlayer.x - 1, coordPlayer.y] == 0)
-                    {
-                        pos = new Vector2(pos.x - _mainGame.Distance, pos.y);
-                        transform.position = pos;
-                        coordPlayer.x--;
-                        CheckAfterMove();
-                    }
+                    pos = new Vector2(pos.x - _mainGame.Distance, pos.y);
+                    transform.position = pos;
+                    coordPlayer.x--;
+                    CheckAfterMove();
                 }
             }
         }
