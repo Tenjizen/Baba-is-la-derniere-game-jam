@@ -1026,18 +1026,75 @@ MonoBehaviour:
   - {fileID: 1952312837408057932, guid: 90d9ea4bd49211d4e99402fa7d12ceb2, type: 3}
   PrefabsPlayer:
   - {fileID: 137089868}
-  Wight: 12
-  Hight: 12
+  Wight: 10
+  Hight: 10
   Distance: 0.64
-  PtsSpawn: 1
-  PosWall: []
-  PosExit: {x: 0, y: 0}
-  PosBox: []
-  ListSaw: []
+  PtsSpawn: 5
+  PosWall:
+  - {x: 2, y: 2}
+  - {x: 2, y: 4}
+  - {x: 5, y: 1}
+  - {x: 5, y: 2}
+  - {x: 5, y: 3}
+  - {x: 5, y: 4}
+  - {x: 5, y: 5}
+  - {x: 5, y: 6}
+  - {x: 5, y: 8}
+  PosExit: {x: 1, y: 1}
+  PosBox:
+  - {x: 1, y: 3}
+  - {x: 3, y: 3}
+  - {x: 1, y: 5}
+  - {x: 3, y: 5}
+  - {x: 7, y: 7}
+  - {x: 7, y: 8}
+  ListSaw:
+  - CoordBaseSaw: {x: 4, y: 1}
+    TargetBaseUp: 0
+    TargetBaseDown: 0
+    TargetBaseRight: 4
+    TargetBaseLeft: 2
+    EnumStateBase: 2
+  - CoordBaseSaw: {x: 1, y: 7}
+    TargetBaseUp: 0
+    TargetBaseDown: 0
+    TargetBaseRight: 4
+    TargetBaseLeft: 1
+    EnumStateBase: 3
+  - CoordBaseSaw: {x: 6, y: 8}
+    TargetBaseUp: 8
+    TargetBaseDown: 7
+    TargetBaseRight: 0
+    TargetBaseLeft: 0
+    EnumStateBase: 1
+  - CoordBaseSaw: {x: 8, y: 7}
+    TargetBaseUp: 7
+    TargetBaseDown: 5
+    TargetBaseRight: 0
+    TargetBaseLeft: 0
+    EnumStateBase: 1
+  - CoordBaseSaw: {x: 8, y: 5}
+    TargetBaseUp: 0
+    TargetBaseDown: 0
+    TargetBaseRight: 8
+    TargetBaseLeft: 6
+    EnumStateBase: 2
+  - CoordBaseSaw: {x: 8, y: 4}
+    TargetBaseUp: 0
+    TargetBaseDown: 0
+    TargetBaseRight: 8
+    TargetBaseLeft: 6
+    EnumStateBase: 2
   ListTreadmill: []
-  ListDoor: []
+  ListDoor:
+  - CoordBaseDoor: {x: 5, y: 7}
+    BaseClose: 1
   ListElectricity: []
-  ListSwitch: []
+  ListSwitch:
+  - CoordBaseSwitch: {x: 6, y: 4}
+    target:
+    - {x: 5, y: 7}
+    BaseOpen: 0
   Player: []
   Box: []
   Saw: []
@@ -1673,5 +1730,13 @@ PrefabInstance:
       propertyPath: _mainGame
       value: 
       objectReference: {fileID: 1271397346}
+    - target: {fileID: 3419310036288584395, guid: 36b6fa6312a9ac741afb118e1bc45378, type: 3}
+      propertyPath: CoordPlayer.x
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3419310036288584395, guid: 36b6fa6312a9ac741afb118e1bc45378, type: 3}
+      propertyPath: CoordPlayer.y
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 36b6fa6312a9ac741afb118e1bc45378, type: 3}
