@@ -128,6 +128,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3419310036288584394, guid: 36b6fa6312a9ac741afb118e1bc45378, type: 3}
   m_PrefabInstance: {fileID: 3419310036151921030}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &164187247 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3419310036288584394, guid: 36b6fa6312a9ac741afb118e1bc45378, type: 3}
+  m_PrefabInstance: {fileID: 1943783023}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &256202545
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1025,67 +1030,54 @@ MonoBehaviour:
   - {fileID: 6628353653005170667, guid: 7c2629bd6ca8a694b865d1c6b0abe21b, type: 3}
   PrefabsPlayer:
   - {fileID: 137089868}
-  Wight: 15
-  Hight: 20
+  - {fileID: 164187247}
+  Wight: 13
+  Hight: 12
   Distance: 0.64
   PtsSpawn: 1
   PosWall:
-  - {x: 4, y: 5}
-  - {x: 3, y: 5}
-  - {x: 2, y: 2}
+  - {x: 6, y: 10}
+  - {x: 6, y: 9}
+  - {x: 6, y: 8}
+  - {x: 6, y: 7}
+  - {x: 6, y: 6}
+  - {x: 6, y: 5}
+  - {x: 6, y: 4}
+  - {x: 6, y: 3}
+  - {x: 6, y: 2}
+  - {x: 6, y: 1}
   PosBox:
-  - {x: 2, y: 3}
-  - {x: 5, y: 6}
+  - {x: 2, y: 9}
+  - {x: 10, y: 4}
   ListSaw:
-  - CoordBaseSaw: {x: 8, y: 8}
-    TargetBaseUp: 8
-    TargetBaseDown: 5
-    TargetBaseRight: 0
-    TargetBaseLeft: 0
-    EnumStateBase: 1
-  - CoordBaseSaw: {x: 7, y: 6}
-    TargetBaseUp: 8
-    TargetBaseDown: 5
-    TargetBaseRight: 0
-    TargetBaseLeft: 0
-    EnumStateBase: 1
-  - CoordBaseSaw: {x: 6, y: 8}
+  - CoordBaseSaw: {x: 1, y: 4}
     TargetBaseUp: 0
     TargetBaseDown: 0
-    TargetBaseRight: 6
-    TargetBaseLeft: 4
+    TargetBaseRight: 5
+    TargetBaseLeft: 1
+    EnumStateBase: 3
+  - CoordBaseSaw: {x: 5, y: 7}
+    TargetBaseUp: 0
+    TargetBaseDown: 0
+    TargetBaseRight: 5
+    TargetBaseLeft: 1
     EnumStateBase: 2
-  ListTreadmill:
-  - CoordBaseTreadmill: {x: 6, y: 3}
-    EnumStateBase: 0
-  - CoordBaseTreadmill: {x: 5, y: 4}
+  - CoordBaseSaw: {x: 7, y: 3}
+    TargetBaseUp: 0
+    TargetBaseDown: 0
+    TargetBaseRight: 11
+    TargetBaseLeft: 7
+    EnumStateBase: 3
+  - CoordBaseSaw: {x: 11, y: 6}
+    TargetBaseUp: 0
+    TargetBaseDown: 0
+    TargetBaseRight: 11
+    TargetBaseLeft: 7
     EnumStateBase: 2
-  - CoordBaseTreadmill: {x: 4, y: 4}
-    EnumStateBase: 2
-  - CoordBaseTreadmill: {x: 3, y: 4}
-    EnumStateBase: 1
-  ListDoor:
-  - CoordBaseDoor: {x: 12, y: 10}
-    BaseClose: 1
-  - CoordBaseDoor: {x: 11, y: 10}
-    BaseClose: 0
-  ListElectricity:
-  - CoordBaseElectricity: {x: 12, y: 12}
-    BaseOpen: 1
-    BaseHorizontal: 1
-    EnumBaseState: 3
-  - CoordBaseElectricity: {x: 11, y: 12}
-    BaseOpen: 0
-    BaseHorizontal: 1
-    EnumBaseState: 3
-  ListSwitch:
-  - CoordBaseSwitch: {x: 11, y: 11}
-    target:
-    - {x: 12, y: 10}
-    - {x: 11, y: 10}
-    - {x: 12, y: 12}
-    - {x: 11, y: 12}
-    BaseOpen: 1
+  ListTreadmill: []
+  ListDoor: []
+  ListElectricity: []
+  ListSwitch: []
   Player: []
   Box: []
   Saw: []
@@ -1662,6 +1654,71 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 3
   m_TargetDisplay: 0
+--- !u!1001 &1943783023
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3419310036288584393, guid: 36b6fa6312a9ac741afb118e1bc45378, type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3419310036288584393, guid: 36b6fa6312a9ac741afb118e1bc45378, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.77
+      objectReference: {fileID: 0}
+    - target: {fileID: 3419310036288584393, guid: 36b6fa6312a9ac741afb118e1bc45378, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.86
+      objectReference: {fileID: 0}
+    - target: {fileID: 3419310036288584393, guid: 36b6fa6312a9ac741afb118e1bc45378, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3419310036288584393, guid: 36b6fa6312a9ac741afb118e1bc45378, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3419310036288584393, guid: 36b6fa6312a9ac741afb118e1bc45378, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3419310036288584393, guid: 36b6fa6312a9ac741afb118e1bc45378, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3419310036288584393, guid: 36b6fa6312a9ac741afb118e1bc45378, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3419310036288584393, guid: 36b6fa6312a9ac741afb118e1bc45378, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3419310036288584393, guid: 36b6fa6312a9ac741afb118e1bc45378, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3419310036288584393, guid: 36b6fa6312a9ac741afb118e1bc45378, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3419310036288584394, guid: 36b6fa6312a9ac741afb118e1bc45378, type: 3}
+      propertyPath: m_Name
+      value: Player (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3419310036288584395, guid: 36b6fa6312a9ac741afb118e1bc45378, type: 3}
+      propertyPath: Mirror
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3419310036288584395, guid: 36b6fa6312a9ac741afb118e1bc45378, type: 3}
+      propertyPath: _mainGame
+      value: 
+      objectReference: {fileID: 1271397346}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 36b6fa6312a9ac741afb118e1bc45378, type: 3}
 --- !u!1001 &3419310036151921030
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1716,6 +1773,10 @@ PrefabInstance:
     - target: {fileID: 3419310036288584394, guid: 36b6fa6312a9ac741afb118e1bc45378, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 3419310036288584395, guid: 36b6fa6312a9ac741afb118e1bc45378, type: 3}
+      propertyPath: Mirror
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3419310036288584395, guid: 36b6fa6312a9ac741afb118e1bc45378, type: 3}
       propertyPath: _mainGame
