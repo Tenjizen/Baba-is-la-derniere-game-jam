@@ -197,6 +197,14 @@ public class MainGame : MonoBehaviour
 
             Electricity[i].CoordElectricity = ListElectricity[i].CoordBaseElectricity;
             Electricity[i].Open = ListElectricity[i].BaseOpen;
+            Electricity[i].Horizontal = ListElectricity[i].BaseHorizontal;
+
+            var enumTreadmill = (int)ListElectricity[i].EnumBaseState;
+            Electricity[i].EnumState = 0;
+            while (enumTreadmill != (int)Electricity[i].EnumState)
+            {
+                Electricity[i].EnumState += 1;
+            }
 
             go2.transform.DOScale(1f, 0.3f);
             yield return new WaitForSeconds(0.05f);

@@ -1,31 +1,98 @@
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class Electricity : MonoBehaviour
 {
+    public enum State { Left, Right, Up, Down, Middle };
+    public State EnumState;
+
     [SerializeField] MainGame _mainGame;
 
     public SpriteRenderer SelfImage;
-
+    public Sprite[] SpriteOpen;
+    public Sprite[] SpriteClose;
 
     public Vector2Int CoordElectricity;
+
     public bool Open;
+    public bool Horizontal;
 
     private void Start()
     {
         _mainGame = FindObjectOfType<MainGame>();
     }
-
-
     private void Update()
     {
         if (Open)
         {
-            SelfImage.color = new Color(0, 0, 0, 25);
+            SelfImage.enabled = true;
+            switch (EnumState)
+            {
+                case State.Left:
+                    if (Horizontal)
+                        SelfImage.sprite = SpriteOpen[0];
+                    else
+                        SelfImage.sprite = SpriteOpen[1];
+                    break;
+                case State.Right:
+                    if (Horizontal)
+                        SelfImage.sprite = SpriteOpen[2];
+                    else
+                        SelfImage.sprite = SpriteOpen[3];
+                    break;
+                case State.Up:
+                    if (Horizontal)
+                        SelfImage.sprite = SpriteOpen[4];
+                    else
+                        SelfImage.sprite = SpriteOpen[5];
+                    break;
+                case State.Down:
+                    if (Horizontal)
+                        SelfImage.sprite = SpriteOpen[6];
+                    else
+                        SelfImage.sprite = SpriteOpen[7];
+                    break;
+                case State.Middle:
+                    if (Horizontal)
+                        SelfImage.sprite = SpriteOpen[8];
+                    else
+                        SelfImage.sprite = SpriteOpen[9];
+                    break;
+            }
         }
         else
         {
-            SelfImage.color = new Color(255, 255, 255, 100);
+            switch (EnumState)
+            {
+                case State.Left:
+                    if (Horizontal)
+                        SelfImage.sprite = SpriteClose[0];
+                    else
+                        SelfImage.sprite = SpriteClose[1];
+                    break;
+                case State.Right:
+                    if (Horizontal)
+                        SelfImage.sprite = SpriteClose[2];
+                    else
+                        SelfImage.sprite = SpriteClose[3];
+                    break;
+                case State.Up:
+                    if (Horizontal)
+                        SelfImage.sprite = SpriteClose[4];
+                    else
+                        SelfImage.sprite = SpriteClose[5];
+                    break;
+                case State.Down:
+                    if (Horizontal)
+                        SelfImage.sprite = SpriteClose[6];
+                    else
+                        SelfImage.sprite = SpriteClose[7];
+                    break;
+                case State.Middle:
+                    SelfImage.enabled = false;
+                    break;
+            }
         }
         foreach (var player in _mainGame.Player)
         {
