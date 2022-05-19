@@ -1026,18 +1026,43 @@ MonoBehaviour:
   - {fileID: 1952312837408057932, guid: 90d9ea4bd49211d4e99402fa7d12ceb2, type: 3}
   PrefabsPlayer:
   - {fileID: 137089868}
-  Wight: 12
-  Hight: 2
+  Wight: 10
+  Hight: 10
   Distance: 0.64
-  PtsSpawn: 1
-  PosWall: []
-  PosExit: {x: 0, y: 0}
-  PosBox: []
+  PtsSpawn: 4
+  PosWall:
+  - {x: 1, y: 4}
+  - {x: 3, y: 4}
+  - {x: 4, y: 4}
+  - {x: 5, y: 4}
+  - {x: 6, y: 4}
+  - {x: 8, y: 4}
+  - {x: 4, y: 1}
+  - {x: 4, y: 3}
+  - {x: 4, y: 4}
+  - {x: 4, y: 5}
+  - {x: 4, y: 6}
+  - {x: 4, y: 7}
+  - {x: 4, y: 8}
+  PosExit: {x: 2, y: 7}
+  PosBox:
+  - {x: 3, y: 2}
+  - {x: 6, y: 2}
+  - {x: 8, y: 2}
+  - {x: 7, y: 1}
+  - {x: 7, y: 3}
+  - {x: 7, y: 5}
   ListSaw: []
   ListTreadmill: []
-  ListDoor: []
+  ListDoor:
+  - CoordBaseDoor: {x: 2, y: 4}
+    BaseClose: 0
   ListElectricity: []
-  ListSwitch: []
+  ListSwitch:
+  - CoordBaseSwitch: {x: 5, y: 8}
+    target:
+    - {x: 3, y: 4}
+    BaseOpen: 0
   Player: []
   Box: []
   Saw: []
