@@ -1026,15 +1026,75 @@ MonoBehaviour:
   - {fileID: 1952312837408057932, guid: 90d9ea4bd49211d4e99402fa7d12ceb2, type: 3}
   PrefabsPlayer:
   - {fileID: 137089868}
-  Wight: 12
-  Hight: 12
+  Wight: 10
+  Hight: 10
   Distance: 0.64
-  PtsSpawn: 1
+  PtsSpawn: 5
   PosWall: []
-  PosExit: {x: 0, y: 0}
+  PosExit: {x: 1, y: 8}
   PosBox: []
   ListSaw: []
-  ListTreadmill: []
+  ListTreadmill:
+  - CoordBaseTreadmill: {x: 1, y: 1}
+    EnumStateBase: 0
+  - CoordBaseTreadmill: {x: 3, y: 1}
+    EnumStateBase: 0
+  - CoordBaseTreadmill: {x: 5, y: 1}
+    EnumStateBase: 0
+  - CoordBaseTreadmill: {x: 7, y: 1}
+    EnumStateBase: 2
+  - CoordBaseTreadmill: {x: 2, y: 2}
+    EnumStateBase: 1
+  - CoordBaseTreadmill: {x: 4, y: 2}
+    EnumStateBase: 3
+  - CoordBaseTreadmill: {x: 6, y: 2}
+    EnumStateBase: 1
+  - CoordBaseTreadmill: {x: 8, y: 2}
+    EnumStateBase: 0
+  - CoordBaseTreadmill: {x: 1, y: 3}
+    EnumStateBase: 1
+  - CoordBaseTreadmill: {x: 3, y: 3}
+    EnumStateBase: 0
+  - CoordBaseTreadmill: {x: 5, y: 3}
+    EnumStateBase: 0
+  - CoordBaseTreadmill: {x: 7, y: 3}
+    EnumStateBase: 2
+  - CoordBaseTreadmill: {x: 2, y: 4}
+    EnumStateBase: 0
+  - CoordBaseTreadmill: {x: 4, y: 4}
+    EnumStateBase: 3
+  - CoordBaseTreadmill: {x: 6, y: 4}
+    EnumStateBase: 3
+  - CoordBaseTreadmill: {x: 8, y: 4}
+    EnumStateBase: 2
+  - CoordBaseTreadmill: {x: 1, y: 5}
+    EnumStateBase: 3
+  - CoordBaseTreadmill: {x: 3, y: 5}
+    EnumStateBase: 3
+  - CoordBaseTreadmill: {x: 5, y: 5}
+    EnumStateBase: 3
+  - CoordBaseTreadmill: {x: 2, y: 6}
+    EnumStateBase: 1
+  - CoordBaseTreadmill: {x: 4, y: 6}
+    EnumStateBase: 0
+  - CoordBaseTreadmill: {x: 6, y: 6}
+    EnumStateBase: 2
+  - CoordBaseTreadmill: {x: 8, y: 6}
+    EnumStateBase: 2
+  - CoordBaseTreadmill: {x: 1, y: 7}
+    EnumStateBase: 0
+  - CoordBaseTreadmill: {x: 3, y: 7}
+    EnumStateBase: 0
+  - CoordBaseTreadmill: {x: 5, y: 7}
+    EnumStateBase: 3
+  - CoordBaseTreadmill: {x: 7, y: 7}
+    EnumStateBase: 3
+  - CoordBaseTreadmill: {x: 2, y: 8}
+    EnumStateBase: 2
+  - CoordBaseTreadmill: {x: 4, y: 8}
+    EnumStateBase: 1
+  - CoordBaseTreadmill: {x: 6, y: 8}
+    EnumStateBase: 1
   ListDoor: []
   ListElectricity: []
   ListSwitch: []
@@ -1673,5 +1733,13 @@ PrefabInstance:
       propertyPath: _mainGame
       value: 
       objectReference: {fileID: 1271397346}
+    - target: {fileID: 3419310036288584395, guid: 36b6fa6312a9ac741afb118e1bc45378, type: 3}
+      propertyPath: CoordPlayer.x
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3419310036288584395, guid: 36b6fa6312a9ac741afb118e1bc45378, type: 3}
+      propertyPath: CoordPlayer.y
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 36b6fa6312a9ac741afb118e1bc45378, type: 3}
