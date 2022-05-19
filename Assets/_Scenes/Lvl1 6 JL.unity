@@ -1056,7 +1056,7 @@ MonoBehaviour:
   ListTreadmill: []
   ListDoor:
   - CoordBaseDoor: {x: 2, y: 4}
-    BaseClose: 0
+    BaseClose: 1
   ListElectricity: []
   ListSwitch:
   - CoordBaseSwitch: {x: 5, y: 8}
