@@ -16,6 +16,7 @@ public class MainGame : MonoBehaviour
 
     public int[,] Map;
     public Vector2Int[] PosWall;
+    public Vector2Int PosExit;
     public Vector2Int[] PosBox;
     public List<SawBase> ListSaw = new List<SawBase>();
     public List<TreadmillBase> ListTreadmill = new List<TreadmillBase>();
@@ -60,7 +61,7 @@ public class MainGame : MonoBehaviour
         }
 
         yield return PlaceMap();
-
+        
         yield return PlaceBox();
 
         yield return PlaceSaw();
@@ -72,6 +73,7 @@ public class MainGame : MonoBehaviour
         yield return PlaceElectricity();
 
         yield return PlaceSwitch();
+
 
         foreach (var item in PrefabsPlayer)
         {
@@ -90,14 +92,23 @@ public class MainGame : MonoBehaviour
         {
             for (int y = 0; y < Hight; y++)
             {
-                GameObject go = GameObject.Instantiate(Prefabs[Map[x, y]]);
-                go.transform.position = new Vector3(x * Distance, y * Distance) - _offset;
-                go.transform.localScale = Vector3.zero;
-                go.transform.DOScale(1, 0.3f);
+                if (x == PosExit.x && y == PosExit.y)
+                {
+                    yield return PlaceExit();
+                }
+                else
+                {
+                    GameObject go = GameObject.Instantiate(Prefabs[Map[x, y]]);
+                    go.transform.position = new Vector3(x * Distance, y * Distance) - _offset;
+                    go.transform.localScale = Vector3.zero;
+                    go.transform.DOScale(1, 0.3f);
+                }
             }
             yield return new WaitForSeconds(0.05f);
         }
     }
+
+
     IEnumerator PlaceBox()
     {
         for (int i = 0; i < PosBox.Length; i++)
@@ -238,6 +249,14 @@ public class MainGame : MonoBehaviour
             yield return new WaitForSeconds(0.05f);
         }
     }
-
+    IEnumerator PlaceExit()
+    {
+        PosPrefab(PosExit, 9);
+        GameObject go = GameObject.Instantiate(Prefabs[Map[PosExit.x, PosExit.y]]);
+        go.transform.position = new Vector3(PosExit.x * Distance, PosExit.y * Distance) - _offset;
+        go.transform.localScale = Vector3.zero;
+        go.transform.DOScale(1, 0.3f);
+        yield return new WaitForSeconds(0.05f);
+    }
 
 }
