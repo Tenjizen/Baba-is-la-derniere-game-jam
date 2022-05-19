@@ -1026,14 +1026,27 @@ MonoBehaviour:
   - {fileID: 1952312837408057932, guid: 90d9ea4bd49211d4e99402fa7d12ceb2, type: 3}
   PrefabsPlayer:
   - {fileID: 137089868}
-  Wight: 12
-  Hight: 12
+  Wight: 10
+  Hight: 10
   Distance: 0.64
-  PtsSpawn: 1
-  PosWall: []
-  PosExit: {x: 0, y: 0}
+  PtsSpawn: 5
+  PosWall:
+  - {x: 4, y: 8}
+  - {x: 4, y: 7}
+  - {x: 5, y: 6}
+  - {x: 5, y: 5}
+  - {x: 5, y: 4}
+  - {x: 7, y: 4}
+  - {x: 8, y: 4}
+  PosExit: {x: 2, y: 5}
   PosBox: []
-  ListSaw: []
+  ListSaw:
+  - CoordBaseSaw: {x: 6, y: 3}
+    TargetBaseUp: 0
+    TargetBaseDown: 0
+    TargetBaseRight: 7
+    TargetBaseLeft: 5
+    EnumStateBase: 3
   ListTreadmill: []
   ListDoor: []
   ListElectricity: []
@@ -1673,5 +1686,13 @@ PrefabInstance:
       propertyPath: _mainGame
       value: 
       objectReference: {fileID: 1271397346}
+    - target: {fileID: 3419310036288584395, guid: 36b6fa6312a9ac741afb118e1bc45378, type: 3}
+      propertyPath: CoordPlayer.x
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3419310036288584395, guid: 36b6fa6312a9ac741afb118e1bc45378, type: 3}
+      propertyPath: CoordPlayer.y
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 36b6fa6312a9ac741afb118e1bc45378, type: 3}
