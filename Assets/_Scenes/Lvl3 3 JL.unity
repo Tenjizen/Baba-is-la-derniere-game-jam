@@ -1026,14 +1026,59 @@ MonoBehaviour:
   - {fileID: 1952312837408057932, guid: 90d9ea4bd49211d4e99402fa7d12ceb2, type: 3}
   PrefabsPlayer:
   - {fileID: 137089868}
-  Wight: 12
-  Hight: 12
+  Wight: 10
+  Hight: 10
   Distance: 0.64
-  PtsSpawn: 1
-  PosWall: []
-  PosExit: {x: 0, y: 0}
-  PosBox: []
-  ListSaw: []
+  PtsSpawn: 5
+  PosWall:
+  - {x: 4, y: 1}
+  - {x: 4, y: 2}
+  - {x: 4, y: 3}
+  - {x: 4, y: 4}
+  - {x: 4, y: 5}
+  - {x: 4, y: 6}
+  - {x: 4, y: 7}
+  - {x: 5, y: 7}
+  - {x: 6, y: 1}
+  - {x: 7, y: 3}
+  - {x: 8, y: 3}
+  PosExit: {x: 8, y: 1}
+  PosBox:
+  - {x: 2, y: 4}
+  - {x: 1, y: 5}
+  - {x: 2, y: 6}
+  - {x: 4, y: 8}
+  ListSaw:
+  - CoordBaseSaw: {x: 8, y: 8}
+    TargetBaseUp: 0
+    TargetBaseDown: 0
+    TargetBaseRight: 8
+    TargetBaseLeft: 6
+    EnumStateBase: 2
+  - CoordBaseSaw: {x: 6, y: 7}
+    TargetBaseUp: 7
+    TargetBaseDown: 5
+    TargetBaseRight: 0
+    TargetBaseLeft: 0
+    EnumStateBase: 1
+  - CoordBaseSaw: {x: 7, y: 6}
+    TargetBaseUp: 6
+    TargetBaseDown: 4
+    TargetBaseRight: 0
+    TargetBaseLeft: 0
+    EnumStateBase: 1
+  - CoordBaseSaw: {x: 8, y: 4}
+    TargetBaseUp: 6
+    TargetBaseDown: 4
+    TargetBaseRight: 0
+    TargetBaseLeft: 0
+    EnumStateBase: 0
+  - CoordBaseSaw: {x: 5, y: 2}
+    TargetBaseUp: 0
+    TargetBaseDown: 0
+    TargetBaseRight: 7
+    TargetBaseLeft: 5
+    EnumStateBase: 3
   ListTreadmill: []
   ListDoor: []
   ListElectricity: []
@@ -1673,5 +1718,13 @@ PrefabInstance:
       propertyPath: _mainGame
       value: 
       objectReference: {fileID: 1271397346}
+    - target: {fileID: 3419310036288584395, guid: 36b6fa6312a9ac741afb118e1bc45378, type: 3}
+      propertyPath: CoordPlayer.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3419310036288584395, guid: 36b6fa6312a9ac741afb118e1bc45378, type: 3}
+      propertyPath: CoordPlayer.y
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 36b6fa6312a9ac741afb118e1bc45378, type: 3}
