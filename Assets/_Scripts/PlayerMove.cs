@@ -14,6 +14,7 @@ public class PlayerMove : MonoBehaviour
 
     private void Start()
     {
+        _mainGame = FindObjectOfType<MainGame>();
         Spawn();
         CoordPlayerSpawn();
     }
@@ -146,10 +147,11 @@ public class PlayerMove : MonoBehaviour
             {
                 var pos = transform.position;
 
-                if (_mainGame.Map[CoordPlayer.x - 1, CoordPlayer.y] == 1)
+                if (_mainGame.Map[CoordPlayer.x - 1, CoordPlayer.y] == 1/*||
+                    _mainGame.Map[CoordPlayer.x - 1, CoordPlayer.y] == 6*/)
                 {
                     CheckAfterMove();
-                    print("mur a droite");
+                    print("Obstacle a droite");
                 }
                 else if (_mainGame.Map[CoordPlayer.x - 1, CoordPlayer.y] == 2)
                 {
@@ -210,10 +212,10 @@ public class PlayerMove : MonoBehaviour
     }
     void CoordPlayerSpawn()
     {
-        var BasDroit = new Vector2Int((_mainGame.Height - 2), (_mainGame.Height - (_mainGame.Height - 1)));
-        var BasGauche = new Vector2Int((_mainGame.Height - (_mainGame.Height - 1)), (_mainGame.Height - (_mainGame.Height - 1)));
-        var HautDroit = new Vector2Int((_mainGame.Height - 2), (_mainGame.Height - 2));
-        var HautGauche = new Vector2Int((_mainGame.Height - (_mainGame.Height - 1)), (_mainGame.Height - 2));
+        var BasDroit = new Vector2Int((_mainGame.Wight - 2), (_mainGame.Hight - (_mainGame.Hight - 1)));
+        var BasGauche = new Vector2Int((_mainGame.Wight - (_mainGame.Wight - 1)), (_mainGame.Hight - (_mainGame.Hight - 1)));
+        var HautDroit = new Vector2Int((_mainGame.Wight - 2), (_mainGame.Hight - 2));
+        var HautGauche = new Vector2Int((_mainGame.Wight - (_mainGame.Wight - 1)), (_mainGame.Hight - 2));
         if (!Mirror)
         {
             if (_mainGame.PtsSpawn == 1) //Haut gauche
@@ -243,16 +245,16 @@ public class PlayerMove : MonoBehaviour
     }
     void Spawn()
     {
-        if (_mainGame.Height % 2 == 0)// map paire
+        if (_mainGame.Wight % 2 == 0 && _mainGame.Hight % 2 == 0)// map paire
         {
-            var SpawnHautDroit = new Vector2(((_mainGame.Height - _mainGame.Height + (_mainGame.Height - 2)) - _mainGame.Height / 2) * _mainGame.Distance,
-                ((_mainGame.Height - _mainGame.Height + (_mainGame.Height - 2)) - _mainGame.Height / 2) * _mainGame.Distance);
-            var SpawnHautGauche = new Vector2(((_mainGame.Height - _mainGame.Height + 1) - _mainGame.Height / 2) * _mainGame.Distance,
-                ((_mainGame.Height - _mainGame.Height + (_mainGame.Height - 2)) - _mainGame.Height / 2) * _mainGame.Distance);
-            var SpawnBasDroit = new Vector2(((_mainGame.Height - _mainGame.Height + (_mainGame.Height - 2)) - _mainGame.Height / 2) * _mainGame.Distance,
-                ((_mainGame.Height - _mainGame.Height + 1) - _mainGame.Height / 2) * _mainGame.Distance);
-            var SpawnBasGauche = new Vector2(((_mainGame.Height - _mainGame.Height + 1) - _mainGame.Height / 2) * _mainGame.Distance,
-                ((_mainGame.Height - _mainGame.Height + 1) - _mainGame.Height / 2) * _mainGame.Distance);
+            var SpawnHautDroit = new Vector2(((_mainGame.Wight - _mainGame.Wight + (_mainGame.Wight - 2)) - _mainGame.Wight / 2) * _mainGame.Distance,
+                ((_mainGame.Hight - _mainGame.Hight + (_mainGame.Hight - 2)) - _mainGame.Hight / 2) * _mainGame.Distance);
+            var SpawnHautGauche = new Vector2(((_mainGame.Wight - _mainGame.Wight + 1) - _mainGame.Wight / 2) * _mainGame.Distance,
+                ((_mainGame.Hight - _mainGame.Hight + (_mainGame.Hight - 2)) - _mainGame.Hight / 2) * _mainGame.Distance);
+            var SpawnBasDroit = new Vector2(((_mainGame.Wight - _mainGame.Wight + (_mainGame.Wight - 2)) - _mainGame.Wight / 2) * _mainGame.Distance,
+                ((_mainGame.Hight - _mainGame.Hight + 1) - _mainGame.Hight / 2) * _mainGame.Distance);
+            var SpawnBasGauche = new Vector2(((_mainGame.Wight - _mainGame.Wight + 1) - _mainGame.Wight / 2) * _mainGame.Distance,
+                ((_mainGame.Hight - _mainGame.Hight + 1) - _mainGame.Hight / 2) * _mainGame.Distance);
             if (!Mirror)
             {
                 if (_mainGame.PtsSpawn == 1) //Haut gauche
@@ -277,19 +279,93 @@ public class PlayerMove : MonoBehaviour
             }
 
             if (_mainGame.PtsSpawn == 5) //as you want
-                this.transform.position = new Vector2((CoordPlayer.x - _mainGame.Height / 2) * _mainGame.Distance,
-                    (CoordPlayer.y - _mainGame.Height / 2) * _mainGame.Distance);
+                this.transform.position = new Vector2((CoordPlayer.x - _mainGame.Wight / 2) * _mainGame.Distance,
+                    (CoordPlayer.y - _mainGame.Hight / 2) * _mainGame.Distance);
+        }
+        else if (_mainGame.Wight % 2 != 0 && _mainGame.Hight % 2 == 0)//Wight impaire
+        {
+            var SpawnHautDroit = new Vector2((((_mainGame.Wight - _mainGame.Wight + (_mainGame.Wight - 2)) - _mainGame.Wight / 2) * _mainGame.Distance) - 0.32f,
+                ((_mainGame.Hight - _mainGame.Hight + (_mainGame.Hight - 2)) - _mainGame.Hight / 2) * _mainGame.Distance);
+            var SpawnHautGauche = new Vector2((((_mainGame.Wight - _mainGame.Wight + 1) - _mainGame.Wight / 2) * _mainGame.Distance) - 0.32f,
+                ((_mainGame.Hight - _mainGame.Hight + (_mainGame.Hight - 2)) - _mainGame.Hight / 2) * _mainGame.Distance);
+            var SpawnBasDroit = new Vector2((((_mainGame.Wight - _mainGame.Wight + (_mainGame.Wight - 2)) - _mainGame.Wight / 2) * _mainGame.Distance) - 0.32f,
+                ((_mainGame.Hight - _mainGame.Hight + 1) - _mainGame.Hight / 2) * _mainGame.Distance);
+            var SpawnBasGauche = new Vector2((((_mainGame.Wight - _mainGame.Wight + 1) - _mainGame.Wight / 2) * _mainGame.Distance) - 0.32f,
+                ((_mainGame.Hight - _mainGame.Hight + 1) - _mainGame.Hight / 2) * _mainGame.Distance);
+            if (!Mirror)
+            {
+                if (_mainGame.PtsSpawn == 1) //Haut gauche
+                    this.transform.position = SpawnHautGauche;
+                else if (_mainGame.PtsSpawn == 2) //Haut droit
+                    this.transform.position = SpawnHautDroit;
+                else if (_mainGame.PtsSpawn == 3) //Bas droit
+                    this.transform.position = SpawnBasDroit;
+                else if (_mainGame.PtsSpawn == 4) //Bas gauche
+                    this.transform.position = SpawnBasGauche;
+            }
+            else
+            {
+                if (_mainGame.PtsSpawn == 1) //Haut droit
+                    this.transform.position = SpawnHautDroit;
+                else if (_mainGame.PtsSpawn == 2) //Haut gauche
+                    this.transform.position = SpawnHautGauche;
+                else if (_mainGame.PtsSpawn == 3) //Bas droit
+                    this.transform.position = SpawnBasGauche;
+                else if (_mainGame.PtsSpawn == 4) //Bas gauche
+                    this.transform.position = SpawnBasDroit;
+            }
+
+            if (_mainGame.PtsSpawn == 5) //as you want
+                this.transform.position = new Vector2(((CoordPlayer.x - _mainGame.Wight / 2) * _mainGame.Distance) - 0.32f,
+                    (CoordPlayer.y - _mainGame.Hight / 2) * _mainGame.Distance);
+        }
+        else if (_mainGame.Wight % 2 == 0 && _mainGame.Hight % 2 != 0)//Hight impair
+        {
+            var SpawnHautDroit = new Vector2(((_mainGame.Wight - _mainGame.Wight + (_mainGame.Wight - 2)) - _mainGame.Wight / 2) * _mainGame.Distance,
+                (((_mainGame.Hight - _mainGame.Hight + (_mainGame.Hight - 2)) - _mainGame.Hight / 2) * _mainGame.Distance) - 0.32f);
+            var SpawnHautGauche = new Vector2(((_mainGame.Wight - _mainGame.Wight + 1) - _mainGame.Wight / 2) * _mainGame.Distance,
+                (((_mainGame.Hight - _mainGame.Hight + (_mainGame.Hight - 2)) - _mainGame.Hight / 2) * _mainGame.Distance) - 0.32f);
+            var SpawnBasDroit = new Vector2(((_mainGame.Wight - _mainGame.Wight + (_mainGame.Wight - 2)) - _mainGame.Wight / 2) * _mainGame.Distance,
+                (((_mainGame.Hight - _mainGame.Hight + 1) - _mainGame.Hight / 2) * _mainGame.Distance) - 0.32f);
+            var SpawnBasGauche = new Vector2(((_mainGame.Wight - _mainGame.Wight + 1) - _mainGame.Wight / 2) * _mainGame.Distance,
+                (((_mainGame.Hight - _mainGame.Hight + 1) - _mainGame.Hight / 2) * _mainGame.Distance) - 0.32f);
+            if (!Mirror)
+            {
+                if (_mainGame.PtsSpawn == 1) //Haut gauche
+                    this.transform.position = SpawnHautGauche;
+                else if (_mainGame.PtsSpawn == 2) //Haut droit
+                    this.transform.position = SpawnHautDroit;
+                else if (_mainGame.PtsSpawn == 3) //Bas droit
+                    this.transform.position = SpawnBasDroit;
+                else if (_mainGame.PtsSpawn == 4) //Bas gauche
+                    this.transform.position = SpawnBasGauche;
+            }
+            else
+            {
+                if (_mainGame.PtsSpawn == 1) //Haut droit
+                    this.transform.position = SpawnHautDroit;
+                else if (_mainGame.PtsSpawn == 2) //Haut gauche
+                    this.transform.position = SpawnHautGauche;
+                else if (_mainGame.PtsSpawn == 3) //Bas droit
+                    this.transform.position = SpawnBasGauche;
+                else if (_mainGame.PtsSpawn == 4) //Bas gauche
+                    this.transform.position = SpawnBasDroit;
+            }
+
+            if (_mainGame.PtsSpawn == 5) //as you want
+                this.transform.position = new Vector2((CoordPlayer.x - _mainGame.Wight / 2) * _mainGame.Distance,
+                    ((CoordPlayer.y - _mainGame.Hight / 2) * _mainGame.Distance) - 0.32f);
         }
         else //map impaire
         {
-            var SpawnHautDroit = new Vector2((((_mainGame.Height - _mainGame.Height + (_mainGame.Height - 2)) - _mainGame.Height / 2) * _mainGame.Distance) - 0.32f,
-                (((_mainGame.Height - _mainGame.Height + (_mainGame.Height - 2)) - _mainGame.Height / 2) * _mainGame.Distance) - 0.32f);
-            var SpawnHautGauche = new Vector2((((_mainGame.Height - _mainGame.Height + 1) - _mainGame.Height / 2) * _mainGame.Distance) - 0.32f,
-                (((_mainGame.Height - _mainGame.Height + (_mainGame.Height - 2)) - _mainGame.Height / 2) * _mainGame.Distance) - 0.32f);
-            var SpawnBasDroit = new Vector2((((_mainGame.Height - _mainGame.Height + (_mainGame.Height - 2)) - _mainGame.Height / 2) * _mainGame.Distance) - 0.32f,
-                (((_mainGame.Height - _mainGame.Height + 1) - _mainGame.Height / 2) * _mainGame.Distance) - 0.32f);
-            var SpawnBasGauche = new Vector2((((_mainGame.Height - _mainGame.Height + 1) - _mainGame.Height / 2) * _mainGame.Distance) - 0.32f,
-                (((_mainGame.Height - _mainGame.Height + 1) - _mainGame.Height / 2) * _mainGame.Distance) - 0.32f);
+            var SpawnHautDroit = new Vector2((((_mainGame.Wight - _mainGame.Wight + (_mainGame.Wight - 2)) - _mainGame.Wight / 2) * _mainGame.Distance) - 0.32f,
+                (((_mainGame.Hight - _mainGame.Hight + (_mainGame.Hight - 2)) - _mainGame.Hight / 2) * _mainGame.Distance) - 0.32f);
+            var SpawnHautGauche = new Vector2((((_mainGame.Wight - _mainGame.Wight + 1) - _mainGame.Wight / 2) * _mainGame.Distance) - 0.32f,
+                (((_mainGame.Hight - _mainGame.Hight + (_mainGame.Hight - 2)) - _mainGame.Hight / 2) * _mainGame.Distance) - 0.32f);
+            var SpawnBasDroit = new Vector2((((_mainGame.Wight - _mainGame.Wight + (_mainGame.Wight - 2)) - _mainGame.Wight / 2) * _mainGame.Distance) - 0.32f,
+                (((_mainGame.Hight - _mainGame.Hight + 1) - _mainGame.Hight / 2) * _mainGame.Distance) - 0.32f);
+            var SpawnBasGauche = new Vector2((((_mainGame.Wight - _mainGame.Wight + 1) - _mainGame.Wight / 2) * _mainGame.Distance) - 0.32f,
+                (((_mainGame.Hight - _mainGame.Hight + 1) - _mainGame.Hight / 2) * _mainGame.Distance) - 0.32f);
             if (!Mirror)
             {
                 if (_mainGame.PtsSpawn == 1) //Haut gauche
@@ -313,8 +389,8 @@ public class PlayerMove : MonoBehaviour
                     this.transform.position = SpawnBasDroit;
             }
             if (_mainGame.PtsSpawn == 5) //as you want
-                this.transform.position = new Vector2(((CoordPlayer.x - _mainGame.Height / 2) * _mainGame.Distance) - 0.32f,
-                    ((CoordPlayer.y - _mainGame.Height / 2) * _mainGame.Distance) - 0.32f);
+                this.transform.position = new Vector2(((CoordPlayer.x - _mainGame.Wight / 2) * _mainGame.Distance) - 0.32f,
+                    ((CoordPlayer.y - _mainGame.Hight / 2) * _mainGame.Distance) - 0.32f);
         }
     }
 

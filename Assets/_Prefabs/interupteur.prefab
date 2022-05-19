@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 954914972447145599}
   - component: {fileID: 1517624053602808876}
+  - component: {fileID: -8359641173798139847}
   m_Layer: 0
   m_Name: interupteur
   m_TagString: Untagged
@@ -70,7 +71,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 0c01362930b71b8418151748b9893427, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -82,3 +83,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &-8359641173798139847
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6628353653005170667}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7f78aa07d1d81349a026d969f8eaa5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _mainGame: {fileID: 0}
+  CoordSwitch: {x: 0, y: 0}
+  Open: 0

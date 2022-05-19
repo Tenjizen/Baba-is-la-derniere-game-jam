@@ -1025,8 +1025,8 @@ MonoBehaviour:
   - {fileID: 6628353653005170667, guid: 7c2629bd6ca8a694b865d1c6b0abe21b, type: 3}
   PrefabsPlayer:
   - {fileID: 137089868}
-  Height: 10
-  Width: 14
+  Wight: 15
+  Hight: 15
   Distance: 0.64
   PtsSpawn: 1
   PosWall:
@@ -1064,10 +1064,31 @@ MonoBehaviour:
     EnumStateBase: 2
   - CoordBaseTreadmill: {x: 3, y: 4}
     EnumStateBase: 1
+  ListDoor:
+  - CoordBaseDoor: {x: 12, y: 10}
+    BaseClose: 1
+  - CoordBaseDoor: {x: 11, y: 10}
+    BaseClose: 0
+  ListElectricity:
+  - CoordBaseElectricity: {x: 12, y: 12}
+    BaseOpen: 1
+  - CoordBaseElectricity: {x: 11, y: 12}
+    BaseOpen: 0
+  ListSwitch:
+  - CoordBaseSwitch: {x: 11, y: 11}
+    target:
+    - {x: 12, y: 10}
+    - {x: 11, y: 10}
+    - {x: 12, y: 12}
+    - {x: 11, y: 12}
+    BaseOpen: 1
   Player: []
   Box: []
   Saw: []
   Treadmill: []
+  Door: []
+  Electricity: []
+  Switch: []
 --- !u!4 &1271397347
 Transform:
   m_ObjectHideFlags: 0

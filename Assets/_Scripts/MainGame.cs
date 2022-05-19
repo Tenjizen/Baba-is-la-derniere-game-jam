@@ -5,12 +5,12 @@ using DG.Tweening;
 
 public class MainGame : MonoBehaviour
 {
-   
+
     public bool Pause = false;
     public GameObject[] Prefabs;
     public GameObject[] PrefabsPlayer;
-    public int Height;
-    public int Width; //a modif good luck
+    public int Wight;
+    public int Hight;
     public float Distance;
     public int PtsSpawn;
 
@@ -19,11 +19,17 @@ public class MainGame : MonoBehaviour
     public Vector2Int[] PosBox;
     public List<SawBase> ListSaw = new List<SawBase>();
     public List<TreadmillBase> ListTreadmill = new List<TreadmillBase>();
+    public List<DoorBase> ListDoor = new List<DoorBase>();
+    public List<ElectricityBase> ListElectricity = new List<ElectricityBase>();
+    public List<SwitchBase> ListSwitch = new List<SwitchBase>();
 
     [HideInInspector] public List<PlayerMove> Player;
     [HideInInspector] public List<Box> Box;
     [HideInInspector] public List<Saw> Saw;
     [HideInInspector] public List<Treadmill> Treadmill;
+    [HideInInspector] public List<Door> Door;
+    [HideInInspector] public List<Electricity> Electricity;
+    [HideInInspector] public List<Switch> Switch;
 
 
     private Vector3 _offset;
@@ -36,17 +42,17 @@ public class MainGame : MonoBehaviour
             Player.Add(FindObjectOfType<PlayerMove>());
             item.SetActive(false);
         }
-        Map = new int[Height, Height];
+        Map = new int[Wight, Hight];
 
-        for (int x = 0; x < Height; x++)
+        for (int x = 0; x < Wight; x++)
         {
-            for (int y = 0; y < Height; y++)
+            for (int y = 0; y < Hight; y++)
             {
-                if (x == 0 || x == Height - 1 || y == 0 || y == Height - 1)
+                if (x == 0 || x == Wight - 1 || y == 0 || y == Hight - 1)
                     Map[x, y] = 1;
             }
         }
-        _offset = new Vector3((Height * Distance) / 2, (Height * Distance) / 2);
+        _offset = new Vector3((Wight * Distance) / 2, (Hight * Distance) / 2);
 
         foreach (var pos in PosWall)
         {
@@ -61,6 +67,12 @@ public class MainGame : MonoBehaviour
 
         yield return PlaceTreadmill();
 
+        yield return PlaceDoor();
+
+        yield return PlaceElectricity();
+
+        yield return PlaceSwitch();
+
         foreach (var item in PrefabsPlayer)
         {
             item.SetActive(true);
@@ -74,9 +86,9 @@ public class MainGame : MonoBehaviour
 
     IEnumerator PlaceMap()
     {
-        for (int x = 0; x < Height; x++)
+        for (int x = 0; x < Wight; x++)
         {
-            for (int y = 0; y < Height; y++)
+            for (int y = 0; y < Hight; y++)
             {
                 GameObject go = GameObject.Instantiate(Prefabs[Map[x, y]]);
                 go.transform.position = new Vector3(x * Distance, y * Distance) - _offset;
@@ -152,6 +164,69 @@ public class MainGame : MonoBehaviour
             }
 
             go2.transform.DOScale(0.5f, 0.3f);
+            yield return new WaitForSeconds(0.05f);
+        }
+    }
+
+    IEnumerator PlaceDoor()
+    {
+        for (int i = 0; i < ListDoor.Count; i++)
+        {
+            PosPrefab(ListDoor[i].CoordBaseDoor, 6);
+            GameObject go2 = GameObject.Instantiate(Prefabs[Map[ListDoor[i].CoordBaseDoor.x, ListDoor[i].CoordBaseDoor.y]]);
+            Door.Add(FindObjectOfType<Door>());
+            go2.transform.position = new Vector3(ListDoor[i].CoordBaseDoor.x * Distance, ListDoor[i].CoordBaseDoor.y * Distance) - _offset;
+            go2.transform.localScale = Vector3.zero;
+
+            Door[i].CoordDoor = ListDoor[i].CoordBaseDoor;
+            Door[i].Close = ListDoor[i].BaseClose;
+
+            go2.transform.DOScale(1f, 0.3f);
+            yield return new WaitForSeconds(0.05f);
+        }
+    }
+    IEnumerator PlaceElectricity()
+    {
+        for (int i = 0; i < ListElectricity.Count; i++)
+        {
+            PosPrefab(ListElectricity[i].CoordBaseElectricity, 7);
+            GameObject go2 = GameObject.Instantiate(Prefabs[Map[ListElectricity[i].CoordBaseElectricity.x, ListElectricity[i].CoordBaseElectricity.y]]);
+            Electricity.Add(FindObjectOfType<Electricity>());
+            go2.transform.position = new Vector3(ListElectricity[i].CoordBaseElectricity.x * Distance, ListElectricity[i].CoordBaseElectricity.y * Distance) - _offset;
+            go2.transform.localScale = Vector3.zero;
+
+            Electricity[i].CoordElectricity = ListElectricity[i].CoordBaseElectricity;
+            Electricity[i].Open = ListElectricity[i].BaseOpen;
+
+            go2.transform.DOScale(1f, 0.3f);
+            yield return new WaitForSeconds(0.05f);
+        }
+    }
+    IEnumerator PlaceSwitch()
+    {
+        for (int i = 0; i < ListSwitch.Count; i++)
+        {
+            PosPrefab(ListSwitch[i].CoordBaseSwitch, 8);
+            GameObject go2 = GameObject.Instantiate(Prefabs[Map[ListSwitch[i].CoordBaseSwitch.x, ListSwitch[i].CoordBaseSwitch.y]]);
+            Switch.Add(FindObjectOfType<Switch>());
+            go2.transform.position = new Vector3(ListSwitch[i].CoordBaseSwitch.x * Distance, ListSwitch[i].CoordBaseSwitch.y * Distance) - _offset;
+            go2.transform.localScale = Vector3.zero;
+
+            Switch[i].CoordSwitch = ListSwitch[i].CoordBaseSwitch;
+            Switch[i].Open = ListSwitch[i].BaseOpen;
+
+
+            //test
+            for (int u = 0; u < ListSwitch[i].target.Length; u++)
+            {
+
+                Switch[i].target.Add(ListSwitch[i].target[u]);
+            }
+            //endtest
+
+
+
+            go2.transform.DOScale(1f, 0.3f);
             yield return new WaitForSeconds(0.05f);
         }
     }
