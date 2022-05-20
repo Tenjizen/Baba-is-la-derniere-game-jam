@@ -166,6 +166,7 @@ public class MainGame : MonoBehaviour
             go2.transform.localScale = Vector3.zero;
 
             Treadmill[i].CoordTreadmill = ListTreadmill[i].CoordBaseTreadmill;
+            Treadmill[i].On= ListTreadmill[i].BaseOn;
 
             var enumTreadmill = (int)ListTreadmill[i].EnumStateBase;
             Treadmill[i].EnumState = 0;
