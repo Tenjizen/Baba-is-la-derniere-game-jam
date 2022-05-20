@@ -1028,6 +1028,7 @@ MonoBehaviour:
   - {fileID: 7307933272386320946, guid: 9eb2f9b2a0627614a8ba868e4afeb632, type: 3}
   - {fileID: 559837106543492276, guid: fe3cfcc3b74f849448902d482c4f1b3f, type: 3}
   - {fileID: 6628353653005170667, guid: 7c2629bd6ca8a694b865d1c6b0abe21b, type: 3}
+  - {fileID: 1952312837408057932, guid: 90d9ea4bd49211d4e99402fa7d12ceb2, type: 3}
   PrefabsPlayer:
   - {fileID: 137089868}
   - {fileID: 164187247}
@@ -1046,6 +1047,7 @@ MonoBehaviour:
   - {x: 6, y: 3}
   - {x: 6, y: 2}
   - {x: 6, y: 1}
+  PosExit: {x: 3, y: 1}
   PosBox:
   - {x: 2, y: 9}
   - {x: 10, y: 4}
