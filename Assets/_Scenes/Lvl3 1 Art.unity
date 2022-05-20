@@ -1023,69 +1023,68 @@ MonoBehaviour:
   - {fileID: 7307933272386320946, guid: 9eb2f9b2a0627614a8ba868e4afeb632, type: 3}
   - {fileID: 559837106543492276, guid: fe3cfcc3b74f849448902d482c4f1b3f, type: 3}
   - {fileID: 6628353653005170667, guid: 7c2629bd6ca8a694b865d1c6b0abe21b, type: 3}
+  - {fileID: 1952312837408057932, guid: 90d9ea4bd49211d4e99402fa7d12ceb2, type: 3}
   PrefabsPlayer:
   - {fileID: 137089868}
-  Wight: 15
-  Hight: 20
+  Wight: 10
+  Hight: 11
   Distance: 0.64
   PtsSpawn: 1
   PosWall:
-  - {x: 4, y: 5}
-  - {x: 3, y: 5}
-  - {x: 2, y: 2}
-  PosBox:
+  - {x: 1, y: 3}
   - {x: 2, y: 3}
+  - {x: 4, y: 3}
+  - {x: 5, y: 3}
+  - {x: 1, y: 7}
+  - {x: 2, y: 7}
+  - {x: 3, y: 7}
+  - {x: 4, y: 7}
+  - {x: 5, y: 7}
+  - {x: 6, y: 7}
+  - {x: 8, y: 7}
   - {x: 5, y: 6}
-  ListSaw:
-  - CoordBaseSaw: {x: 8, y: 8}
-    TargetBaseUp: 8
-    TargetBaseDown: 5
-    TargetBaseRight: 0
-    TargetBaseLeft: 0
-    EnumStateBase: 1
-  - CoordBaseSaw: {x: 7, y: 6}
-    TargetBaseUp: 8
-    TargetBaseDown: 5
-    TargetBaseRight: 0
-    TargetBaseLeft: 0
-    EnumStateBase: 1
-  - CoordBaseSaw: {x: 6, y: 8}
-    TargetBaseUp: 0
-    TargetBaseDown: 0
-    TargetBaseRight: 6
-    TargetBaseLeft: 4
-    EnumStateBase: 2
-  ListTreadmill:
-  - CoordBaseTreadmill: {x: 6, y: 3}
-    EnumStateBase: 0
-  - CoordBaseTreadmill: {x: 5, y: 4}
-    EnumStateBase: 2
-  - CoordBaseTreadmill: {x: 4, y: 4}
-    EnumStateBase: 2
-  - CoordBaseTreadmill: {x: 3, y: 4}
-    EnumStateBase: 1
+  - {x: 5, y: 5}
+  - {x: 5, y: 4}
+  PosExit: {x: 0, y: 5}
+  PosBox: []
+  ListSaw: []
+  ListTreadmill: []
   ListDoor:
-  - CoordBaseDoor: {x: 12, y: 10}
+  - CoordBaseDoor: {x: 3, y: 3}
     BaseClose: 1
-  - CoordBaseDoor: {x: 11, y: 10}
-    BaseClose: 0
+  - CoordBaseDoor: {x: 7, y: 7}
+    BaseClose: 1
   ListElectricity:
-  - CoordBaseElectricity: {x: 12, y: 12}
-    BaseOpen: 1
-    BaseHorizontal: 1
-    EnumBaseState: 3
-  - CoordBaseElectricity: {x: 11, y: 12}
+  - CoordBaseElectricity: {x: 5, y: 1}
     BaseOpen: 0
     BaseHorizontal: 1
-    EnumBaseState: 3
+    EnumBaseState: 0
+  - CoordBaseElectricity: {x: 5, y: 2}
+    BaseOpen: 0
+    BaseHorizontal: 1
+    EnumBaseState: 0
+  - CoordBaseElectricity: {x: 6, y: 3}
+    BaseOpen: 0
+    BaseHorizontal: 1
+    EnumBaseState: 0
+  - CoordBaseElectricity: {x: 7, y: 3}
+    BaseOpen: 0
+    BaseHorizontal: 1
+    EnumBaseState: 0
+  - CoordBaseElectricity: {x: 8, y: 3}
+    BaseOpen: 0
+    BaseHorizontal: 1
+    EnumBaseState: 0
   ListSwitch:
-  - CoordBaseSwitch: {x: 11, y: 11}
-    target:
-    - {x: 12, y: 10}
-    - {x: 11, y: 10}
-    - {x: 12, y: 12}
-    - {x: 11, y: 12}
-    BaseOpen: 1
+  - CoordBaseSwitch: {x: 3, y: 8}
+    target: []
+    BaseOpen: 0
+  - CoordBaseSwitch: {x: 4, y: 8}
+    target: []
+    BaseOpen: 0
+  - CoordBaseSwitch: {x: 5, y: 8}
+    target: []
+    BaseOpen: 0
   Player: []
   Box: []
   Saw: []

@@ -170,7 +170,7 @@ public class PlayerMove : MonoBehaviour
         }
 
     }
-   
+
     void CheckAfterMove()
     {
         if (_mainGame.PrefabsPlayer.Length > 1)
@@ -397,7 +397,17 @@ public class PlayerMove : MonoBehaviour
 
     public void CaisseUp()
     {
-        if (_mainGame.Map[CoordPlayer.x, CoordPlayer.y + 2] == 5)
+        if (_mainGame.Map[CoordPlayer.x, CoordPlayer.y + 2] == 6)
+        {
+            foreach (var item in _mainGame.Door)
+            {
+                if (item.CoordDoor.x == CoordPlayer.x && item.CoordDoor.y == CoordPlayer.y + 2)
+                {
+                    if (!item.Close) { MoveBoxUp(); }
+                }
+            }
+        }
+        else if (_mainGame.Map[CoordPlayer.x, CoordPlayer.y + 2] == 5)
         {
             MoveBoxUp();
         }

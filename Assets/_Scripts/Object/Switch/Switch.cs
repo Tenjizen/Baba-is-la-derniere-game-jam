@@ -30,16 +30,17 @@ public class Switch : MonoBehaviour
                     foreach (var item in _mainGame.Door)
                     {
                         if (item.CoordDoor == target[i])
-                        {
                             item.Close = !item.Close;
-                        }
                     }
                     foreach (var item in _mainGame.Electricity)
                     {
                         if (item.CoordElectricity == target[i])
-                        {
                             item.Open = !item.Open;
-                        }
+                    }
+                    foreach (var item in _mainGame.Treadmill)
+                    {
+                        if (item.CoordTreadmill == target[i])
+                            item.On = !item.On;
                     }
                 }
             }
