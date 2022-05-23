@@ -34,7 +34,6 @@ public class PlayerMove : MonoBehaviour
             if (_mainGame.Map[CoordPlayer.x, CoordPlayer.y + 1] == 1)
             {
                 CheckAfterMove();
-                print("mur en haut");
             }
             else if (_mainGame.Map[CoordPlayer.x, CoordPlayer.y + 1] == 2)
             {
@@ -55,7 +54,6 @@ public class PlayerMove : MonoBehaviour
             if (_mainGame.Map[CoordPlayer.x, CoordPlayer.y - 1] == 1)
             {
                 CheckAfterMove();
-                print("mur en bas");
             }
             else if (_mainGame.Map[CoordPlayer.x, CoordPlayer.y - 1] == 2)
             {
@@ -80,7 +78,6 @@ public class PlayerMove : MonoBehaviour
                 if (_mainGame.Map[CoordPlayer.x - 1, CoordPlayer.y] == 1)
                 {
                     CheckAfterMove();
-                    print("mur a gauche");
                 }
                 else if (_mainGame.Map[CoordPlayer.x - 1, CoordPlayer.y] == 2)
                 {
@@ -102,7 +99,6 @@ public class PlayerMove : MonoBehaviour
                 if (_mainGame.Map[CoordPlayer.x + 1, CoordPlayer.y] == 1)
                 {
                     CheckAfterMove();
-                    print("mur a droite");
                 }
                 else if (_mainGame.Map[CoordPlayer.x + 1, CoordPlayer.y] == 2)
                 {
@@ -128,7 +124,6 @@ public class PlayerMove : MonoBehaviour
                 if (_mainGame.Map[CoordPlayer.x + 1, CoordPlayer.y] == 1)
                 {
                     CheckAfterMove();
-                    print("mur a gauche");
                 }
                 else if (_mainGame.Map[CoordPlayer.x + 1, CoordPlayer.y] == 2)
                 {
@@ -151,7 +146,6 @@ public class PlayerMove : MonoBehaviour
                     _mainGame.Map[CoordPlayer.x - 1, CoordPlayer.y] == 6*/)
                 {
                     CheckAfterMove();
-                    print("Obstacle a droite");
                 }
                 else if (_mainGame.Map[CoordPlayer.x - 1, CoordPlayer.y] == 2)
                 {
@@ -204,7 +198,6 @@ public class PlayerMove : MonoBehaviour
                     if (_mainGame.Player[y].oldPos == _mainGame.Saw[i].CoordSaw && _mainGame.Player[y].CoordPlayer == _mainGame.Saw[i].OldCoordSaw)
                     {
                         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-                        print("passé au travers de la scie");
                     }
                 }
             }
@@ -413,7 +406,6 @@ public class PlayerMove : MonoBehaviour
         }
         else if (_mainGame.Map[CoordPlayer.x, CoordPlayer.y + 2] != 0)
         {
-            print("caisse avec un obstacle en haut");
         }
         else
         {
@@ -430,7 +422,6 @@ public class PlayerMove : MonoBehaviour
         }
         else if (_mainGame.Map[CoordPlayer.x, CoordPlayer.y - 2] != 0)
         {
-            print("caisse avec un obstacle bas");
         }
         else
         {
@@ -445,7 +436,6 @@ public class PlayerMove : MonoBehaviour
         }
         else if (_mainGame.Map[CoordPlayer.x - 2, CoordPlayer.y] != 0)
         {
-            print("caisse avec un obstacle left");
         }
         else
         {
@@ -461,7 +451,6 @@ public class PlayerMove : MonoBehaviour
         }
         else if (_mainGame.Map[CoordPlayer.x + 2, CoordPlayer.y] != 0)
         {
-            print("caisse avec un obstacle droit");
         }
         else
         {
@@ -480,7 +469,6 @@ public class PlayerMove : MonoBehaviour
                 _mainGame.Box[i].transform.position = new Vector2(caisse[i].transform.position.x, caisse[i].transform.position.y + _mainGame.Distance);
                 _mainGame.Map[caisse[i].CoordBox.x, caisse[i].CoordBox.y] = 2;
                 _mainGame.Map[caisse[i].CoordBox.x, caisse[i].CoordBox.y - 1] = 0;
-                print("caisse up");
                 break;
             }
         }
@@ -501,7 +489,6 @@ public class PlayerMove : MonoBehaviour
                 _mainGame.Box[i].transform.position = new Vector2(caisse[i].transform.position.x, caisse[i].transform.position.y - _mainGame.Distance);
                 _mainGame.Map[caisse[i].CoordBox.x, caisse[i].CoordBox.y] = 2;
                 _mainGame.Map[caisse[i].CoordBox.x, caisse[i].CoordBox.y + 1] = 0;
-                print("caisse down");
                 break;
             }
         }
@@ -522,7 +509,6 @@ public class PlayerMove : MonoBehaviour
                 _mainGame.Box[i].transform.position = new Vector2(caisse[i].transform.position.x - _mainGame.Distance, caisse[i].transform.position.y);
                 _mainGame.Map[caisse[i].CoordBox.x, caisse[i].CoordBox.y] = 2;
                 _mainGame.Map[caisse[i].CoordBox.x + 1, caisse[i].CoordBox.y] = 0;
-                print("caisse left");
                 break;
             }
         }
@@ -543,7 +529,6 @@ public class PlayerMove : MonoBehaviour
                 _mainGame.Box[i].transform.position = new Vector2(caisse[i].transform.position.x + _mainGame.Distance, caisse[i].transform.position.y);
                 _mainGame.Map[caisse[i].CoordBox.x - 1, caisse[i].CoordBox.y] = 0;
                 _mainGame.Map[caisse[i].CoordBox.x, caisse[i].CoordBox.y] = 2;
-                print("caisse right");
                 break;
             }
         }

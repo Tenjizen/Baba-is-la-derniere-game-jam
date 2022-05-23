@@ -1090,6 +1090,7 @@ MonoBehaviour:
   Door: []
   Electricity: []
   Switch: []
+  Exit: []
 --- !u!4 &1271397347
 Transform:
   m_ObjectHideFlags: 0
@@ -1657,7 +1658,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 4
   m_TargetDisplay: 0
 --- !u!1001 &3419310036151921030
 PrefabInstance:

@@ -45,7 +45,7 @@ public class Saw : MonoBehaviour
                 {
                     if (_mainGame.Map[CoordSaw.x, CoordSaw.y + 1] == 2)
                     {
-                        print("bloquer par caisse");
+                        EnumState = State.Down;
                     }
                     else
                     {
@@ -75,7 +75,6 @@ public class Saw : MonoBehaviour
                 {
                     if (_mainGame.Map[CoordSaw.x, CoordSaw.y - 1] == 2)
                     {
-                        print("bloquer par caisse");
                         EnumState = State.Up;
                     }
                     else
@@ -104,7 +103,7 @@ public class Saw : MonoBehaviour
                 {
                     if (_mainGame.Map[CoordSaw.x - 1, CoordSaw.y] == 2)
                     {
-                        print("bloquer par caisse");
+                        EnumState = State.Right;
                     }
                     else
                     {
@@ -131,7 +130,7 @@ public class Saw : MonoBehaviour
                 {
                     if (_mainGame.Map[CoordSaw.x + 1, CoordSaw.y] == 2)
                     {
-                        print("bloquer par caisse");
+                        EnumState = State.Left;
                     }
                     else
                     {
@@ -156,7 +155,7 @@ public class Saw : MonoBehaviour
             default:
                 break;
         }
-        
+
     }
-    
+
 }

@@ -1089,20 +1089,28 @@ MonoBehaviour:
   ListTreadmill:
   - CoordBaseTreadmill: {x: 11, y: 12}
     EnumStateBase: 2
+    BaseOn: 0
   - CoordBaseTreadmill: {x: 12, y: 12}
     EnumStateBase: 2
+    BaseOn: 0
   - CoordBaseTreadmill: {x: 13, y: 12}
     EnumStateBase: 2
+    BaseOn: 0
   - CoordBaseTreadmill: {x: 14, y: 12}
     EnumStateBase: 2
+    BaseOn: 0
   - CoordBaseTreadmill: {x: 15, y: 12}
     EnumStateBase: 2
+    BaseOn: 0
   - CoordBaseTreadmill: {x: 1, y: 4}
     EnumStateBase: 2
+    BaseOn: 1
   - CoordBaseTreadmill: {x: 2, y: 4}
     EnumStateBase: 2
+    BaseOn: 1
   - CoordBaseTreadmill: {x: 3, y: 4}
     EnumStateBase: 0
+    BaseOn: 1
   ListDoor: []
   ListElectricity:
   - CoordBaseElectricity: {x: 5, y: 11}
@@ -1145,6 +1153,7 @@ MonoBehaviour:
   Door: []
   Electricity: []
   Switch: []
+  Exit: []
 --- !u!4 &1271397347
 Transform:
   m_ObjectHideFlags: 0
@@ -1712,7 +1721,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 4
   m_TargetDisplay: 0
 --- !u!1001 &3419310036151921030
 PrefabInstance:

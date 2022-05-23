@@ -16,7 +16,7 @@ public class Treadmill : MonoBehaviour
 
     private void Start()
     {
-        On = true;
+        //On = true;
         _mainGame = FindObjectOfType<MainGame>();
 
     }

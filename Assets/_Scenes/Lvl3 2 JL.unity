@@ -1037,64 +1037,94 @@ MonoBehaviour:
   ListTreadmill:
   - CoordBaseTreadmill: {x: 1, y: 1}
     EnumStateBase: 0
+    BaseOn: 1
   - CoordBaseTreadmill: {x: 3, y: 1}
     EnumStateBase: 0
+    BaseOn: 1
   - CoordBaseTreadmill: {x: 5, y: 1}
     EnumStateBase: 0
+    BaseOn: 1
   - CoordBaseTreadmill: {x: 7, y: 1}
     EnumStateBase: 2
+    BaseOn: 1
   - CoordBaseTreadmill: {x: 2, y: 2}
     EnumStateBase: 1
+    BaseOn: 1
   - CoordBaseTreadmill: {x: 4, y: 2}
     EnumStateBase: 3
+    BaseOn: 1
   - CoordBaseTreadmill: {x: 6, y: 2}
     EnumStateBase: 1
+    BaseOn: 1
   - CoordBaseTreadmill: {x: 8, y: 2}
     EnumStateBase: 0
+    BaseOn: 1
   - CoordBaseTreadmill: {x: 1, y: 3}
     EnumStateBase: 1
+    BaseOn: 1
   - CoordBaseTreadmill: {x: 3, y: 3}
     EnumStateBase: 0
+    BaseOn: 1
   - CoordBaseTreadmill: {x: 5, y: 3}
     EnumStateBase: 0
+    BaseOn: 1
   - CoordBaseTreadmill: {x: 7, y: 3}
     EnumStateBase: 2
+    BaseOn: 1
   - CoordBaseTreadmill: {x: 2, y: 4}
     EnumStateBase: 0
+    BaseOn: 1
   - CoordBaseTreadmill: {x: 4, y: 4}
     EnumStateBase: 3
+    BaseOn: 1
   - CoordBaseTreadmill: {x: 6, y: 4}
     EnumStateBase: 3
+    BaseOn: 1
   - CoordBaseTreadmill: {x: 8, y: 4}
     EnumStateBase: 2
+    BaseOn: 1
   - CoordBaseTreadmill: {x: 1, y: 5}
     EnumStateBase: 3
+    BaseOn: 1
   - CoordBaseTreadmill: {x: 3, y: 5}
     EnumStateBase: 3
+    BaseOn: 1
   - CoordBaseTreadmill: {x: 5, y: 5}
     EnumStateBase: 3
+    BaseOn: 1
   - CoordBaseTreadmill: {x: 2, y: 6}
     EnumStateBase: 1
+    BaseOn: 1
   - CoordBaseTreadmill: {x: 4, y: 6}
     EnumStateBase: 0
+    BaseOn: 1
   - CoordBaseTreadmill: {x: 6, y: 6}
     EnumStateBase: 2
+    BaseOn: 1
   - CoordBaseTreadmill: {x: 8, y: 6}
     EnumStateBase: 2
+    BaseOn: 1
   - CoordBaseTreadmill: {x: 1, y: 7}
     EnumStateBase: 0
+    BaseOn: 1
   - CoordBaseTreadmill: {x: 3, y: 7}
     EnumStateBase: 0
+    BaseOn: 1
   - CoordBaseTreadmill: {x: 5, y: 7}
     EnumStateBase: 3
+    BaseOn: 1
   - CoordBaseTreadmill: {x: 7, y: 7}
     EnumStateBase: 3
+    BaseOn: 1
   - CoordBaseTreadmill: {x: 2, y: 8}
     EnumStateBase: 2
+    BaseOn: 1
   - CoordBaseTreadmill: {x: 4, y: 8}
     EnumStateBase: 1
+    BaseOn: 1
   - CoordBaseTreadmill: {x: 6, y: 8}
     EnumStateBase: 1
+    BaseOn: 1
   ListDoor: []
   ListElectricity: []
   ListSwitch: []
@@ -1105,6 +1135,7 @@ MonoBehaviour:
   Door: []
   Electricity: []
   Switch: []
+  Exit: []
 --- !u!4 &1271397347
 Transform:
   m_ObjectHideFlags: 0
@@ -1672,7 +1703,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 4
   m_TargetDisplay: 0
 --- !u!1001 &3419310036151921030
 PrefabInstance:

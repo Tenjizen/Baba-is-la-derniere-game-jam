@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6759551463584117639}
   - component: {fileID: 7698134917030668998}
+  - component: {fileID: 2908207068829200590}
   m_Layer: 0
   m_Name: Sortie
   m_TagString: Untagged
@@ -71,7 +72,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7109b95a862c25c489ed0d60494fa272, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 67e76dc98f013f44187cb2e951b1c46b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -82,3 +83,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2908207068829200590
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1952312837408057932}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91f50b6fe09896d40bdaa6e6df964569, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _mainGame: {fileID: 0}
+  CoordExit: {x: 0, y: 0}

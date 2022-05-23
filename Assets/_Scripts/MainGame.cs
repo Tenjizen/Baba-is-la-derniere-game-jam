@@ -31,6 +31,7 @@ public class MainGame : MonoBehaviour
     [HideInInspector] public List<Door> Door;
     [HideInInspector] public List<Electricity> Electricity;
     [HideInInspector] public List<Switch> Switch;
+    [HideInInspector] public List<Exit> Exit;
 
 
     private Vector3 _offset;
@@ -101,7 +102,7 @@ public class MainGame : MonoBehaviour
                     GameObject go = GameObject.Instantiate(Prefabs[Map[x, y]]);
                     go.transform.position = new Vector3(x * Distance, y * Distance) - _offset;
                     go.transform.localScale = Vector3.zero;
-                    go.transform.DOScale(1, 0.3f);
+                    go.transform.DOScale(0.5f, 0.3f);
                 }
             }
             yield return new WaitForSeconds(0.05f);
@@ -149,7 +150,7 @@ public class MainGame : MonoBehaviour
                 Saw[i].EnumState += 1;
             }
 
-            go2.transform.DOScale(1f, 0.3f);
+            go2.transform.DOScale(0.5f, 0.3f);
             yield return new WaitForSeconds(0.05f);
         }
     }
@@ -166,14 +167,15 @@ public class MainGame : MonoBehaviour
             go2.transform.localScale = Vector3.zero;
 
             Treadmill[i].CoordTreadmill = ListTreadmill[i].CoordBaseTreadmill;
-            Treadmill[i].On= ListTreadmill[i].BaseOn;
-
             var enumTreadmill = (int)ListTreadmill[i].EnumStateBase;
             Treadmill[i].EnumState = 0;
             while (enumTreadmill != (int)Treadmill[i].EnumState)
             {
                 Treadmill[i].EnumState += 1;
             }
+
+            Treadmill[i].On = ListTreadmill[i].BaseOn;
+         
 
             go2.transform.DOScale(0.5f, 0.3f);
             yield return new WaitForSeconds(0.05f);
@@ -193,7 +195,7 @@ public class MainGame : MonoBehaviour
             Door[i].CoordDoor = ListDoor[i].CoordBaseDoor;
             Door[i].Close = ListDoor[i].BaseClose;
 
-            go2.transform.DOScale(1f, 0.3f);
+            go2.transform.DOScale(0.5f, 0.3f);
             yield return new WaitForSeconds(0.05f);
         }
     }
@@ -218,7 +220,7 @@ public class MainGame : MonoBehaviour
                 Electricity[i].EnumState += 1;
             }
 
-            go2.transform.DOScale(1f, 0.3f);
+            go2.transform.DOScale(0.5f, 0.3f);
             yield return new WaitForSeconds(0.05f);
         }
     }
@@ -236,17 +238,15 @@ public class MainGame : MonoBehaviour
             Switch[i].Open = ListSwitch[i].BaseOpen;
 
 
-            //test
             for (int u = 0; u < ListSwitch[i].target.Length; u++)
             {
 
                 Switch[i].target.Add(ListSwitch[i].target[u]);
             }
-            //endtest
 
 
 
-            go2.transform.DOScale(1f, 0.3f);
+            go2.transform.DOScale(0.5f, 0.3f);
             yield return new WaitForSeconds(0.05f);
         }
     }
@@ -254,9 +254,14 @@ public class MainGame : MonoBehaviour
     {
         PosPrefab(PosExit, 9);
         GameObject go = GameObject.Instantiate(Prefabs[Map[PosExit.x, PosExit.y]]);
+        Exit.Add(FindObjectOfType<Exit>());
+
+        Exit[0].CoordExit.x = PosExit.x;
+        Exit[0].CoordExit.y = PosExit.y;
+
         go.transform.position = new Vector3(PosExit.x * Distance, PosExit.y * Distance) - _offset;
         go.transform.localScale = Vector3.zero;
-        go.transform.DOScale(1, 0.3f);
+        go.transform.DOScale(0.5f, 0.3f);
         yield return new WaitForSeconds(0.05f);
     }
 

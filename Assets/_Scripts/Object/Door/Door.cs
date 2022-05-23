@@ -37,7 +37,6 @@ public class Door : MonoBehaviour
                 {
                     if (Close)
                     {
-                        print("québlo");
                         //moche et repetitif faudrait revoir le code du player pour le réduire au plus simple
                         posItem = new Vector2(posItem.x + _mainGame.Distance, posItem.y);
                         player.transform.position = posItem;
@@ -58,7 +57,6 @@ public class Door : MonoBehaviour
                 {
                     if (Close)
                     {
-                        print("québlo");
                         posItem = new Vector2(posItem.x - _mainGame.Distance, posItem.y);
                         player.transform.position = posItem;
                         player.CoordPlayer.x--;
@@ -77,7 +75,6 @@ public class Door : MonoBehaviour
                 {
                     if (Close)
                     {
-                        print("québlo");
                         posItem = new Vector2(posItem.x , posItem.y - _mainGame.Distance);
                         player.transform.position = posItem;
                         player.CoordPlayer.y--;
@@ -96,7 +93,6 @@ public class Door : MonoBehaviour
                 {
                     if (Close)
                     {
-                        print("québlo");
                         posItem = new Vector2(posItem.x, posItem.y + _mainGame.Distance);
                         player.transform.position = posItem;
                         player.CoordPlayer.y++;
