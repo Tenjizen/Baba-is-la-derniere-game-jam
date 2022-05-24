@@ -20,6 +20,8 @@ public class Exit : MonoBehaviour
     {
         if(_mainGame.Player[0].CoordPlayer == CoordExit)
         {
+            AudioManager.Instance.PlaySFXSound("snd_victory");
+
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
         }
         switch (EnumState)

@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/_Scenes/Menu.unity
     guid: 1c229931f2d43614d8949c8da4794617
   - enabled: 1
+    path: Assets/_Scenes/Lvl1 0 Dialog.unity
+    guid: 50e30c86f86a2994c89387d191f2bba0
+  - enabled: 1
     path: Assets/_Scenes/Lvl1 1 Art.unity
     guid: b01270609906f5f46b92e5bfa413ae98
   - enabled: 1
@@ -27,6 +30,9 @@ EditorBuildSettings:
     path: Assets/_Scenes/Lvl1 6 JL.unity
     guid: a3c5c1c3b8f1e724fa03bd0d2686bb59
   - enabled: 1
+    path: Assets/_Scenes/Lvl2 0 Dialog.unity
+    guid: 3b8afbe79cbc67240adb3a86d6866995
+  - enabled: 1
     path: Assets/_Scenes/Lvl2 1 Art.unity
     guid: ac75afd26702fd348b1345b95eab73b1
   - enabled: 1
@@ -41,6 +47,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Scenes/Lvl2 5 Art.unity
     guid: 949b3500fe50b4a4badf54a8b6ae375d
+  - enabled: 1
+    path: Assets/_Scenes/Lvl3 0 Dialog.unity
+    guid: c96fd03679588514dab22e3f3e827ce2
   - enabled: 1
     path: Assets/_Scenes/Lvl3 1 Art.unity
     guid: a7179a8af6061de4eab9e814d2070b9a

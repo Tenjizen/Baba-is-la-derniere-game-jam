@@ -76,67 +76,20 @@ public class AudioManager : MonoBehaviour
         return null;
     }
     /* all sound,
-    
+    Dialogue1(fait)
+    Dialogue2(fait)
+    Dialogue3(fait)
+    Saperlipopette
+    snd_bloqué(fait normalement)
+    snd_door(fait)
+    snd_electric_death(fait)
+    snd_interface(fait)
+    snd_music_game_ambiance(fait)
+    snd_music_menu(fait)
+    snd_player_walk(fait)
+    snd_saw_death(fait)
    
-
-
+    snd_victory(fait)
      */
 
-
-
-    /* 
-       IEnumerator RunMoveForAllPlayer(BattleUnit sourceUnit, Move move)
-    {
-        yield return new WaitForSeconds(1f);
-        for (int i = 0; i < _playerParty.Monsters.Count; i++)
-        {
-            var player = _playerUnits[i];
-            AudioManager.Instance.PlaySFXSound(move.Base.Sound);
-            if (move.Base.Category == MoveCategory.Status)
-            {
-                StartCoroutine(RunMoveEffects(move, sourceUnit.Monster, _playerUnits[i].Monster, sourceUnit));
-                if (player.Monster.HP > 0)
-                    StartCoroutine(_playerUnits[i].PlayBoostAnimation());
-            }
-            else
-            {
-                if (player.Monster.HP > 0)
-                {
-                    player.Monster.HP += player.Monster.MaxHp / 5;
-                    if (player.Monster.HP > player.Monster.MaxHp)
-                        player.Monster.HP = player.Monster.MaxHp;
-                    player.Monster.HpChanged = true;
-
-                    StartCoroutine(player.Hud.UpdateHP());
-                    if (player.Monster.HP > 0)
-                        StartCoroutine(player.PlayHealAnimation());
-
-                }
-            }
-        }
-        yield return new WaitForSeconds(1.5f);
-
-        sourceUnit.Monster.OnAfterTurn();
-        yield return sourceUnit.Hud.UpdateHP();
-        if (sourceUnit.IsPlayerUnit)
-            sourceUnit.PlayFadeAnimation();
-        if (sourceUnit.Monster.HP <= 0)
-        {
-            if (sourceUnit.isPlayerUnit)
-                _playerUnitsDead.Add(_playerSelectedUnit);
-
-            yield return _dialogBox.TypeDialog($"{sourceUnit.Monster.Base.Name} Fainted");
-            sourceUnit.PlayFaintAnimation();
-
-            var _hudTarget = sourceUnit.GetComponentInChildren<BattleHud>(true);
-            _hudTarget.gameObject.SetActive(false);
-            yield return new WaitForSeconds(2f);
-
-            CheckForBattleOver(sourceUnit);
-        }
-        canSelected = true;
-
-
-    }
-    */
 }

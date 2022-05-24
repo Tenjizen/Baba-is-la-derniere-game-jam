@@ -27,32 +27,36 @@ public class Switch : MonoBehaviour
             SelfImage.sprite = SpriteOnOff[0];
         else
             SelfImage.sprite = SpriteOnOff[1];
-            foreach (var player in _mainGame.Player)
+        foreach (var player in _mainGame.Player)
+        {
+            if (player.CoordPlayer == CoordSwitch && Input.GetKeyDown(KeyCode.E))
             {
-                if (player.CoordPlayer == CoordSwitch && Input.GetKeyDown(KeyCode.E))
-                {
-                    Open = !Open;
+                AudioManager.Instance.PlaySFXSound("snd_interface");
 
-                    for (int i = 0; i < target.Count; i++)
+                Open = !Open;
+
+                for (int i = 0; i < target.Count; i++)
+                {
+                    foreach (var item in _mainGame.Door)
                     {
-                        foreach (var item in _mainGame.Door)
-                        {
-                            if (item.CoordDoor == target[i])
-                                item.Close = !item.Close;
-                        }
-                        foreach (var item in _mainGame.Electricity)
-                        {
-                            if (item.CoordElectricity == target[i])
-                                item.Open = !item.Open;
-                        }
-                        foreach (var item in _mainGame.Treadmill)
-                        {
-                            if (item.CoordTreadmill == target[i])
-                                item.On = !item.On;
-                        }
+                        if (item.CoordDoor == target[i])
+                            item.Close = !item.Close;
+                        AudioManager.Instance.PlaySFXSound("snd_door");
+
+                    }
+                    foreach (var item in _mainGame.Electricity)
+                    {
+                        if (item.CoordElectricity == target[i])
+                            item.Open = !item.Open;
+                    }
+                    foreach (var item in _mainGame.Treadmill)
+                    {
+                        if (item.CoordTreadmill == target[i])
+                            item.On = !item.On;
                     }
                 }
             }
+        }
     }
 
 

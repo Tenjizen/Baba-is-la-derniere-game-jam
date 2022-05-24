@@ -40,6 +40,10 @@ public class MainGame : MonoBehaviour
 
     IEnumerator Start()
     {
+        AudioManager.Instance.audioSourceMusic.Stop();
+
+        StartCoroutine(AudioManager.Instance.IEPlayMusicSound("snd_music_game_ambiance"));
+
         foreach (var item in PrefabsPlayer)
         {
             Player.Add(FindObjectOfType<PlayerMove>());
