@@ -80,7 +80,7 @@ SpriteRenderer:
   m_Size: {x: 0.64, y: 0.64}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &2908207068829200590
@@ -99,8 +99,8 @@ MonoBehaviour:
   EnumState: 0
   SelfImage: {fileID: 7698134917030668998}
   SpriteDir:
-  - {fileID: 21300000, guid: 99398b70018ed7d4293f7ad8cafe17db, type: 3}
-  - {fileID: 21300000, guid: 99398b70018ed7d4293f7ad8cafe17db, type: 3}
+  - {fileID: 21300000, guid: 8927cde7554cc4344b535f1ee6d49c27, type: 3}
+  - {fileID: 21300000, guid: 6bf4573fa2643bd48aec1d6a7935189e, type: 3}
   - {fileID: 21300000, guid: ce6be01b0bd8fd7408e61e1bd5bb604f, type: 3}
-  - {fileID: 21300000, guid: 67e76dc98f013f44187cb2e951b1c46b, type: 3}
+  - {fileID: 21300000, guid: d77f07926017fce42a8249314f5c74b4, type: 3}
   CoordExit: {x: 0, y: 0}

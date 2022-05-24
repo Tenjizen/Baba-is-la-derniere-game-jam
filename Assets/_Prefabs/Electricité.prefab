@@ -99,13 +99,13 @@ MonoBehaviour:
   _mainGame: {fileID: 0}
   SelfImage: {fileID: 2438950432897647148}
   SpriteOpen:
-  - {fileID: 21300000, guid: 0789bed2cc422d041ba7984eb1b36da8, type: 3}
-  - {fileID: 21300000, guid: c71a131199b711f4b8a034f044b76660, type: 3}
+  - {fileID: 21300000, guid: 83132e9424e26ec4ea1f04e3ee0ea3a5, type: 3}
+  - {fileID: 21300000, guid: 03f154ca53e771142ac2d40292a841c5, type: 3}
   - {fileID: 21300000, guid: 8de9c0abc29409b4289bf437a22b7eb7, type: 3}
   - {fileID: 21300000, guid: c13905511275b084da7ad5043b86ef13, type: 3}
   - {fileID: 21300000, guid: a0040101793acb84887fa8c79c5e07a3, type: 3}
-  - {fileID: 21300000, guid: c946547f745610649b819b78b5111255, type: 3}
-  - {fileID: 21300000, guid: 4d7fda8ab2575f74c9403b0935bc49ca, type: 3}
+  - {fileID: 21300000, guid: 738653fe3a38ac343a901cd5ecea5be1, type: 3}
+  - {fileID: 21300000, guid: ec87d4c9bd0fc95479d828d342c5b06a, type: 3}
   - {fileID: 21300000, guid: 5e8586191431b2748930cdb9bec55520, type: 3}
   - {fileID: 21300000, guid: 45ba7fa654f98374cbf6e6f7cd5e9974, type: 3}
   - {fileID: 21300000, guid: 5912af245491c6a4886752adcc29417a, type: 3}
