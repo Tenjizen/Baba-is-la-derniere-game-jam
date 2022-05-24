@@ -1059,8 +1059,10 @@ MonoBehaviour:
   ListDoor:
   - CoordBaseDoor: {x: 4, y: 2}
     BaseClose: 1
+    EnumBaseState: 0
   - CoordBaseDoor: {x: 7, y: 2}
     BaseClose: 1
+    EnumBaseState: 1
   ListElectricity: []
   ListSwitch:
   - CoordBaseSwitch: {x: 1, y: 1}

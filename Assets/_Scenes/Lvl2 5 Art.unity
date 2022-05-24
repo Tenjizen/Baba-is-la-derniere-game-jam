@@ -1158,7 +1158,9 @@ MonoBehaviour:
   - {x: 3, y: 8}
   - {x: 4, y: 8}
   - {x: 5, y: 8}
-  PosExit: {x: 19, y: 10}
+  ListExit:
+  - BaseState: 0
+    CoordExit: {x: 19, y: 12}
   PosBox:
   - {x: 3, y: 4}
   - {x: 7, y: 5}
@@ -1786,7 +1788,7 @@ PrefabInstance:
     - target: {fileID: 3419310036288584392, guid: 36b6fa6312a9ac741afb118e1bc45378, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 2723ddc5db6aaeb4183541df1d7abc97, type: 3}
+      objectReference: {fileID: 21300000, guid: f003e8805a3542748a2f6788215b8f06, type: 3}
     - target: {fileID: 3419310036288584393, guid: 36b6fa6312a9ac741afb118e1bc45378, type: 3}
       propertyPath: m_RootOrder
       value: 2

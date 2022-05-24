@@ -96,6 +96,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _mainGame: {fileID: 0}
+  EnumState: 0
   SelfImage: {fileID: 6032485992725285858}
+  SpriteOpenClose:
+  - {fileID: 21300000, guid: 06d39cac902ef1043997ce1519dcb744, type: 3}
+  - {fileID: 21300000, guid: 48491b0f68811514b893aa260a97d282, type: 3}
+  - {fileID: 21300000, guid: 50630011899b8194bb37d54b682de510, type: 3}
+  - {fileID: 21300000, guid: b163f2a04b3c5f5459e8621e334fafdc, type: 3}
+  - {fileID: 21300000, guid: 5fb3d5630617f7246bb723ee453d3d70, type: 3}
+  - {fileID: 21300000, guid: 901c3a416c742b34bb78dfc76bdd03c4, type: 3}
+  - {fileID: 21300000, guid: 2c9aa9d0f60e6a2459e5f116c732dc06, type: 3}
+  - {fileID: 21300000, guid: b16e47488c286bb439d88ef9ae0b37d9, type: 3}
   CoordDoor: {x: 0, y: 0}
   Close: 0

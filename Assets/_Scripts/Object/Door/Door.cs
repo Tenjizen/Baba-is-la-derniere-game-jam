@@ -3,9 +3,11 @@ using UnityEngine;
 public class Door : MonoBehaviour
 {
     [SerializeField] MainGame _mainGame;
-
+    public enum State { Left, Right, Up, Down };
+    public State EnumState;
 
     public SpriteRenderer SelfImage;
+    public Sprite[] SpriteOpenClose;
 
 
     public Vector2Int CoordDoor;
@@ -21,11 +23,39 @@ public class Door : MonoBehaviour
     {
         if (!Close)
         {
-            SelfImage.color = new Color(0, 0, 0, 25);
+            switch (EnumState)
+            {
+                case State.Left:
+                    SelfImage.sprite = SpriteOpenClose[4];
+                    break;
+                case State.Right:
+                    SelfImage.sprite = SpriteOpenClose[5];
+                    break;
+                case State.Up:
+                    SelfImage.sprite = SpriteOpenClose[6];
+                    break;
+                case State.Down:
+                    SelfImage.sprite = SpriteOpenClose[7];
+                    break;
+            }
         }
         else
         {
-            SelfImage.color = new Color(255, 255, 255, 100);
+            switch (EnumState)
+            {
+                case State.Left:
+                    SelfImage.sprite = SpriteOpenClose[0];
+                    break;
+                case State.Right:
+                    SelfImage.sprite = SpriteOpenClose[1];
+                    break;
+                case State.Up:
+                    SelfImage.sprite = SpriteOpenClose[2];
+                    break;
+                case State.Down:
+                    SelfImage.sprite = SpriteOpenClose[3];
+                    break;
+            }
         }
         foreach (var player in _mainGame.Player)
         {
@@ -75,7 +105,7 @@ public class Door : MonoBehaviour
                 {
                     if (Close)
                     {
-                        posItem = new Vector2(posItem.x , posItem.y - _mainGame.Distance);
+                        posItem = new Vector2(posItem.x, posItem.y - _mainGame.Distance);
                         player.transform.position = posItem;
                         player.CoordPlayer.y--;
                     }

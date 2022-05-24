@@ -9,6 +9,9 @@ public class Treadmill : MonoBehaviour
     public enum State { Up, Down, Left, Right };
     public State EnumState;
 
+    public SpriteRenderer SelfImage;
+    public Sprite[] SpriteOnOff;
+
     public bool On;
 
     public Vector2Int CoordTreadmill;
@@ -16,7 +19,6 @@ public class Treadmill : MonoBehaviour
 
     private void Start()
     {
-        //On = true;
         _mainGame = FindObjectOfType<MainGame>();
 
     }
@@ -151,6 +153,39 @@ public class Treadmill : MonoBehaviour
                             break;
                     }
                 }
+            }
+            switch (EnumState)
+            {
+                case State.Up:
+                    SelfImage.sprite = SpriteOnOff[0];
+                    break;
+                case State.Down:
+                    SelfImage.sprite = SpriteOnOff[1];
+                    break;
+                case State.Left:
+                    SelfImage.sprite = SpriteOnOff[2];
+                    break;
+                case State.Right:
+                    SelfImage.sprite = SpriteOnOff[3];
+                    break;
+            }
+        }
+        else
+        {
+            switch (EnumState)
+            {
+                case State.Up:
+                    SelfImage.sprite = SpriteOnOff[4];
+                    break;
+                case State.Down:
+                    SelfImage.sprite = SpriteOnOff[5];
+                    break;
+                case State.Left:
+                    SelfImage.sprite = SpriteOnOff[6];
+                    break;
+                case State.Right:
+                    SelfImage.sprite = SpriteOnOff[7];
+                    break;
             }
         }
     }

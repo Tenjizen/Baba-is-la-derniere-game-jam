@@ -16,7 +16,8 @@ public class MainGame : MonoBehaviour
 
     public int[,] Map;
     public Vector2Int[] PosWall;
-    public Vector2Int PosExit;
+    //public Vector2Int PosExit;
+    public List<ExitBase> ListExit = new List<ExitBase>();
     public Vector2Int[] PosBox;
     public List<SawBase> ListSaw = new List<SawBase>();
     public List<TreadmillBase> ListTreadmill = new List<TreadmillBase>();
@@ -63,6 +64,8 @@ public class MainGame : MonoBehaviour
 
         yield return PlaceMap();
         
+        yield return PlaceExit();
+
         yield return PlaceBox();
 
         yield return PlaceSaw();
@@ -93,17 +96,12 @@ public class MainGame : MonoBehaviour
         {
             for (int y = 0; y < Hight; y++)
             {
-                if (x == PosExit.x && y == PosExit.y)
-                {
-                    yield return PlaceExit();
-                }
-                else
-                {
-                    GameObject go = GameObject.Instantiate(Prefabs[Map[x, y]]);
-                    go.transform.position = new Vector3(x * Distance, y * Distance) - _offset;
-                    go.transform.localScale = Vector3.zero;
-                    go.transform.DOScale(0.5f, 0.3f);
-                }
+
+                GameObject go = GameObject.Instantiate(Prefabs[Map[x, y]]);
+                go.transform.position = new Vector3(x * Distance, y * Distance) - _offset;
+                go.transform.localScale = Vector3.zero;
+                go.transform.DOScale(0.5f, 0.3f);
+
             }
             yield return new WaitForSeconds(0.05f);
         }
@@ -175,7 +173,7 @@ public class MainGame : MonoBehaviour
             }
 
             Treadmill[i].On = ListTreadmill[i].BaseOn;
-         
+
 
             go2.transform.DOScale(0.5f, 0.3f);
             yield return new WaitForSeconds(0.05f);
@@ -195,6 +193,12 @@ public class MainGame : MonoBehaviour
             Door[i].CoordDoor = ListDoor[i].CoordBaseDoor;
             Door[i].Close = ListDoor[i].BaseClose;
 
+            var enumDoor = (int)ListDoor[i].EnumBaseState;
+            Door[i].EnumState = 0;
+            while (enumDoor != (int)Door[i].EnumState)
+            {
+                Door[i].EnumState += 1;
+            }
             go2.transform.DOScale(0.5f, 0.3f);
             yield return new WaitForSeconds(0.05f);
         }
@@ -252,17 +256,28 @@ public class MainGame : MonoBehaviour
     }
     IEnumerator PlaceExit()
     {
-        PosPrefab(PosExit, 9);
-        GameObject go = GameObject.Instantiate(Prefabs[Map[PosExit.x, PosExit.y]]);
-        Exit.Add(FindObjectOfType<Exit>());
+        for (int i = 0; i < ListExit.Count; i++)
+        {
 
-        Exit[0].CoordExit.x = PosExit.x;
-        Exit[0].CoordExit.y = PosExit.y;
+            PosPrefab(ListExit[i].CoordExit, 9);
+            GameObject go = GameObject.Instantiate(Prefabs[Map[ListExit[i].CoordExit.x, ListExit[i].CoordExit.y]]);
+            Exit.Add(FindObjectOfType<Exit>());
+            go.transform.position = new Vector3(ListExit[i].CoordExit.x * Distance, ListExit[i].CoordExit.y * Distance) - _offset;
+            go.transform.localScale = Vector3.zero;
 
-        go.transform.position = new Vector3(PosExit.x * Distance, PosExit.y * Distance) - _offset;
-        go.transform.localScale = Vector3.zero;
-        go.transform.DOScale(0.5f, 0.3f);
-        yield return new WaitForSeconds(0.05f);
+            Exit[i].CoordExit.x = ListExit[i].CoordExit.x;
+            Exit[i].CoordExit.y = ListExit[i].CoordExit.y;
+
+            var enumExit = (int)ListExit[i].BaseState;
+            Exit[i].EnumState = 0;
+            while (enumExit != (int)Exit[i].EnumState)
+            {
+                Exit[i].EnumState += 1;
+            }
+
+            go.transform.DOScale(0.5f, 0.3f);
+            yield return new WaitForSeconds(0.05f);
+        }
     }
 
 }

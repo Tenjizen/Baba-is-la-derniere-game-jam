@@ -1103,10 +1103,10 @@ MonoBehaviour:
     EnumStateBase: 2
     BaseOn: 0
   - CoordBaseTreadmill: {x: 1, y: 4}
-    EnumStateBase: 2
+    EnumStateBase: 0
     BaseOn: 1
   - CoordBaseTreadmill: {x: 2, y: 4}
-    EnumStateBase: 2
+    EnumStateBase: 0
     BaseOn: 1
   - CoordBaseTreadmill: {x: 3, y: 4}
     EnumStateBase: 0

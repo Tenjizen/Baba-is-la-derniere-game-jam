@@ -97,5 +97,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mainGame: {fileID: 0}
   EnumState: 0
+  SelfImage: {fileID: 7083130434663616978}
+  SpriteOnOff:
+  - {fileID: 21300000, guid: 9667e7d83de7ce34eaebe3b96e879a3c, type: 3}
+  - {fileID: 21300000, guid: df57c4b7052bc7c418163a16e7eb1812, type: 3}
+  - {fileID: 21300000, guid: 653a9bc485af3674a80568e78c5ed201, type: 3}
+  - {fileID: 21300000, guid: ea0915e140844a74f8bbf091d8c933ee, type: 3}
+  - {fileID: 21300000, guid: d6e5fbd7971002646ac308c9206b761e, type: 3}
+  - {fileID: 21300000, guid: a7194be68e2ed894cbcdf2b9944f67c8, type: 3}
+  - {fileID: 21300000, guid: 16a4bf587ebfbee41bc6c211d1d0a31d, type: 3}
+  - {fileID: 21300000, guid: b0a222fadf380014caf3109d9d524d8c, type: 3}
   On: 0
   CoordTreadmill: {x: 0, y: 0}

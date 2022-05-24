@@ -12,6 +12,8 @@ public class Saw : MonoBehaviour
     public Vector2Int CoordSaw;
     public Vector2Int OldCoordSaw;
 
+    
+
 
     public int TargetUp;
     public int TargetDown;
@@ -33,6 +35,7 @@ public class Saw : MonoBehaviour
         {
             MoveScie();
         }
+        
     }
 
     void MoveScie()

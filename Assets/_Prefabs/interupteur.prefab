@@ -97,5 +97,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mainGame: {fileID: 0}
   CoordSwitch: {x: 0, y: 0}
+  SelfImage: {fileID: 1517624053602808876}
+  SpriteOnOff:
+  - {fileID: 21300000, guid: e1e811b0fdbb1104a8052360d176b29f, type: 3}
+  - {fileID: 21300000, guid: f9bf15d249eb5df4db7c8ac8cccb7ccc, type: 3}
   Open: 0
   target: []
