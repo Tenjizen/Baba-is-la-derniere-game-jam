@@ -1045,15 +1045,19 @@ MonoBehaviour:
   - {x: 5, y: 6}
   - {x: 5, y: 5}
   - {x: 5, y: 4}
-  PosExit: {x: 0, y: 5}
+  ListExit:
+  - BaseState: 2
+    CoordExit: {x: 0, y: 5}
   PosBox: []
   ListSaw: []
   ListTreadmill: []
   ListDoor:
   - CoordBaseDoor: {x: 3, y: 3}
     BaseClose: 1
+    EnumBaseState: 3
   - CoordBaseDoor: {x: 7, y: 7}
     BaseClose: 0
+    EnumBaseState: 2
   ListElectricity:
   - CoordBaseElectricity: {x: 5, y: 1}
     BaseOpen: 0

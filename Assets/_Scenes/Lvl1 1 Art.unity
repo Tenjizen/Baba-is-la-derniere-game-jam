@@ -728,7 +728,9 @@ MonoBehaviour:
   - {x: 12, y: 7}
   - {x: 12, y: 5}
   - {x: 12, y: 4}
-  PosExit: {x: 2, y: 12}
+  ListExit:
+  - BaseState: 0
+    CoordExit: {x: 2, y: 12}
   PosBox:
   - {x: 13, y: 2}
   - {x: 6, y: 10}

@@ -1044,7 +1044,9 @@ MonoBehaviour:
   - {x: 4, y: 6}
   - {x: 4, y: 7}
   - {x: 4, y: 8}
-  PosExit: {x: 2, y: 7}
+  ListExit:
+  - BaseState: 2
+    CoordExit: {x: 0, y: 7}
   PosBox:
   - {x: 3, y: 2}
   - {x: 6, y: 2}
@@ -1057,6 +1059,7 @@ MonoBehaviour:
   ListDoor:
   - CoordBaseDoor: {x: 2, y: 4}
     BaseClose: 1
+    EnumBaseState: 3
   ListElectricity: []
   ListSwitch:
   - CoordBaseSwitch: {x: 5, y: 8}

@@ -1031,7 +1031,9 @@ MonoBehaviour:
   Distance: 0.64
   PtsSpawn: 4
   PosWall: []
-  PosExit: {x: 7, y: 5}
+  ListExit:
+  - BaseState: 0
+    CoordExit: {x: 7, y: 5}
   PosBox:
   - {x: 7, y: 3}
   - {x: 5, y: 4}

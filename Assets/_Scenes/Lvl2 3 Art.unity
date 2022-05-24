@@ -1053,7 +1053,9 @@ MonoBehaviour:
   - {x: 10, y: 5}
   - {x: 11, y: 5}
   - {x: 5, y: 8}
-  PosExit: {x: 3, y: 1}
+  ListExit:
+  - BaseState: 1
+    CoordExit: {x: 3, y: 0}
   PosBox:
   - {x: 8, y: 12}
   ListSaw:

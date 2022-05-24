@@ -506,6 +506,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: ef91003ef3ae570489a75d8e1470b2cd, type: 3}
+    - target: {fileID: 7558085245690966268, guid: 27887a5fdee6c1a4fab10fac8aaed69e, type: 3}
+      propertyPath: m_Name
+      value: ButtonPlay
+      objectReference: {fileID: 0}
     - target: {fileID: 7558085245690966269, guid: 27887a5fdee6c1a4fab10fac8aaed69e, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -677,6 +681,10 @@ PrefabInstance:
     - target: {fileID: 7558085247174401200, guid: 27887a5fdee6c1a4fab10fac8aaed69e, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -2.065
+      objectReference: {fileID: 0}
+    - target: {fileID: 7558085247174401201, guid: 27887a5fdee6c1a4fab10fac8aaed69e, type: 3}
+      propertyPath: m_text
+      value: Play
       objectReference: {fileID: 0}
     - target: {fileID: 7558085247174401201, guid: 27887a5fdee6c1a4fab10fac8aaed69e, type: 3}
       propertyPath: m_fontSize

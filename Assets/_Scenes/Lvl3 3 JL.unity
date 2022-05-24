@@ -1042,7 +1042,9 @@ MonoBehaviour:
   - {x: 6, y: 1}
   - {x: 7, y: 3}
   - {x: 8, y: 3}
-  PosExit: {x: 8, y: 1}
+  ListExit:
+  - BaseState: 1
+    CoordExit: {x: 8, y: 0}
   PosBox:
   - {x: 2, y: 4}
   - {x: 1, y: 5}
