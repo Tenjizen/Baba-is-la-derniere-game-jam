@@ -1063,18 +1063,14 @@ MonoBehaviour:
     BaseClose: 1
     EnumBaseState: 0
   - CoordBaseDoor: {x: 7, y: 2}
-    BaseClose: 1
+    BaseClose: 0
     EnumBaseState: 0
   ListElectricity: []
   ListSwitch:
   - CoordBaseSwitch: {x: 1, y: 1}
     target:
     - {x: 4, y: 2}
-    BaseOpen: 1
-  - CoordBaseSwitch: {x: 6, y: 11}
-    target:
     - {x: 7, y: 2}
-    - {x: 4, y: 2}
     BaseOpen: 1
   Player: []
   Box: []

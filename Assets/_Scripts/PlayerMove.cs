@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class PlayerMove : MonoBehaviour
@@ -9,8 +10,9 @@ public class PlayerMove : MonoBehaviour
     public bool Mirror;
     public Vector2Int CoordPlayer;
     public Vector2Int oldPos;
-
-
+    public SpriteRenderer _spriteRenderer;
+    public Animator Animator;
+    private Vector2 _input;
 
     private void Start()
     {
@@ -24,6 +26,24 @@ public class PlayerMove : MonoBehaviour
         {
             MovePlayer();
         }
+        _input.x = Input.GetAxisRaw("Horizontal");
+        _input.y = Input.GetAxisRaw("Vertical");
+        if (_input.x == -1)
+            _spriteRenderer.flipX = true;
+        else if (_input.x == 1)
+            _spriteRenderer.flipX = false;
+        else if (_input.y == 1)
+            _spriteRenderer.flipX = false;
+        else if (_input.y == -1)
+            _spriteRenderer.flipX = false;
+
+        if (_input != Vector2.zero)
+        {
+            Animator.SetFloat("X", _input.x);
+            Animator.SetFloat("Y", _input.y);
+        }
+
+
     }
     private void MovePlayer()
     {
@@ -50,6 +70,7 @@ public class PlayerMove : MonoBehaviour
         }
         else if (Input.GetKeyDown(KeyCode.S))
         {
+
             var pos = transform.position;
             if (_mainGame.Map[CoordPlayer.x, CoordPlayer.y - 1] == 1)
             {
@@ -175,8 +196,6 @@ public class PlayerMove : MonoBehaviour
                 var posPlayerUno = _mainGame.PrefabsPlayer[1].transform.position;
                 if (posPlayerZero.x == posPlayerUno.x - _mainGame.Distance && posPlayerZero.y == posPlayerUno.y)
                     SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-
-
 
                 if (_mainGame.PrefabsPlayer[1] == this.gameObject)
                 {
@@ -386,8 +405,6 @@ public class PlayerMove : MonoBehaviour
                     ((CoordPlayer.y - _mainGame.Hight / 2) * _mainGame.Distance) - 0.32f);
         }
     }
-
-
     public void CaisseUp()
     {
         if (_mainGame.Map[CoordPlayer.x, CoordPlayer.y + 2] == 6)

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3419310036288584393}
   - component: {fileID: 3419310036288584392}
   - component: {fileID: 3419310036288584395}
+  - component: {fileID: 137089869}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -99,3 +100,24 @@ MonoBehaviour:
   Mirror: 0
   CoordPlayer: {x: 0, y: 0}
   oldPos: {x: 0, y: 0}
+  _spriteRenderer: {fileID: 3419310036288584392}
+  Animator: {fileID: 137089869}
+--- !u!95 &137089869
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3419310036288584394}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f92512ab123887c4780c7c419ee5a193, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
