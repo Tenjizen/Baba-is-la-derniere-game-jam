@@ -53,6 +53,7 @@ public class PlayerMove : MonoBehaviour
 
             if (_mainGame.Map[CoordPlayer.x, CoordPlayer.y + 1] == 1)
             {
+                AudioManager.Instance.PlaySFXSound("snd_bloqué");
                 CheckAfterMove();
             }
             else if (_mainGame.Map[CoordPlayer.x, CoordPlayer.y + 1] == 2)
@@ -65,6 +66,8 @@ public class PlayerMove : MonoBehaviour
                 posPlayer = new Vector2(posPlayer.x, posPlayer.y + _mainGame.Distance);
                 transform.position = posPlayer;
                 CoordPlayer.y++;
+                AudioManager.Instance.PlaySFXSound("snd_player_walk");
+
                 CheckAfterMove();
             }
         }
@@ -74,6 +77,8 @@ public class PlayerMove : MonoBehaviour
             var pos = transform.position;
             if (_mainGame.Map[CoordPlayer.x, CoordPlayer.y - 1] == 1)
             {
+                AudioManager.Instance.PlaySFXSound("snd_bloqué");
+
                 CheckAfterMove();
             }
             else if (_mainGame.Map[CoordPlayer.x, CoordPlayer.y - 1] == 2)
@@ -86,6 +91,7 @@ public class PlayerMove : MonoBehaviour
                 pos = new Vector2(pos.x, pos.y - _mainGame.Distance);
                 transform.position = pos;
                 CoordPlayer.y--;
+                AudioManager.Instance.PlaySFXSound("snd_player_walk");
                 CheckAfterMove();
             }
         }
@@ -98,6 +104,7 @@ public class PlayerMove : MonoBehaviour
 
                 if (_mainGame.Map[CoordPlayer.x - 1, CoordPlayer.y] == 1)
                 {
+                    AudioManager.Instance.PlaySFXSound("snd_bloqué");
                     CheckAfterMove();
                 }
                 else if (_mainGame.Map[CoordPlayer.x - 1, CoordPlayer.y] == 2)
@@ -110,6 +117,7 @@ public class PlayerMove : MonoBehaviour
                     pos = new Vector2(pos.x - _mainGame.Distance, pos.y);
                     transform.position = pos;
                     CoordPlayer.x--;
+                    AudioManager.Instance.PlaySFXSound("snd_player_walk");
                     CheckAfterMove();
                 }
             }
@@ -119,6 +127,7 @@ public class PlayerMove : MonoBehaviour
 
                 if (_mainGame.Map[CoordPlayer.x + 1, CoordPlayer.y] == 1)
                 {
+                    AudioManager.Instance.PlaySFXSound("snd_bloqué");
                     CheckAfterMove();
                 }
                 else if (_mainGame.Map[CoordPlayer.x + 1, CoordPlayer.y] == 2)
@@ -131,6 +140,7 @@ public class PlayerMove : MonoBehaviour
                     pos = new Vector2(pos.x + _mainGame.Distance, pos.y);
                     transform.position = pos;
                     CoordPlayer.x++;
+                    AudioManager.Instance.PlaySFXSound("snd_player_walk");
                     CheckAfterMove();
 
                 }
@@ -144,6 +154,7 @@ public class PlayerMove : MonoBehaviour
 
                 if (_mainGame.Map[CoordPlayer.x + 1, CoordPlayer.y] == 1)
                 {
+                    AudioManager.Instance.PlaySFXSound("snd_bloqué");
                     CheckAfterMove();
                 }
                 else if (_mainGame.Map[CoordPlayer.x + 1, CoordPlayer.y] == 2)
@@ -156,6 +167,7 @@ public class PlayerMove : MonoBehaviour
                     pos = new Vector2(pos.x + _mainGame.Distance, pos.y);
                     transform.position = pos;
                     CoordPlayer.x++;
+                    AudioManager.Instance.PlaySFXSound("snd_player_walk");
                     CheckAfterMove();
                 }
             }
@@ -166,6 +178,7 @@ public class PlayerMove : MonoBehaviour
                 if (_mainGame.Map[CoordPlayer.x - 1, CoordPlayer.y] == 1/*||
                     _mainGame.Map[CoordPlayer.x - 1, CoordPlayer.y] == 6*/)
                 {
+                    AudioManager.Instance.PlaySFXSound("snd_bloqué");
                     CheckAfterMove();
                 }
                 else if (_mainGame.Map[CoordPlayer.x - 1, CoordPlayer.y] == 2)
@@ -179,6 +192,7 @@ public class PlayerMove : MonoBehaviour
                     pos = new Vector2(pos.x - _mainGame.Distance, pos.y);
                     transform.position = pos;
                     CoordPlayer.x--;
+                    AudioManager.Instance.PlaySFXSound("snd_player_walk");
                     CheckAfterMove();
                 }
             }
@@ -212,10 +226,12 @@ public class PlayerMove : MonoBehaviour
                 {
                     if (_mainGame.Saw[i].CoordSaw == _mainGame.Player[y].CoordPlayer)
                     {
+                        AudioManager.Instance.PlaySFXSound("snd_saw_death");
                         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
                     }
                     if (_mainGame.Player[y].oldPos == _mainGame.Saw[i].CoordSaw && _mainGame.Player[y].CoordPlayer == _mainGame.Saw[i].OldCoordSaw)
                     {
+                        AudioManager.Instance.PlaySFXSound("snd_saw_death");
                         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
                     }
                 }
@@ -423,6 +439,7 @@ public class PlayerMove : MonoBehaviour
         }
         else if (_mainGame.Map[CoordPlayer.x, CoordPlayer.y + 2] != 0)
         {
+            AudioManager.Instance.PlaySFXSound("snd_bloqué");
         }
         else
         {
@@ -439,6 +456,7 @@ public class PlayerMove : MonoBehaviour
         }
         else if (_mainGame.Map[CoordPlayer.x, CoordPlayer.y - 2] != 0)
         {
+            AudioManager.Instance.PlaySFXSound("snd_bloqué");
         }
         else
         {
@@ -453,6 +471,7 @@ public class PlayerMove : MonoBehaviour
         }
         else if (_mainGame.Map[CoordPlayer.x - 2, CoordPlayer.y] != 0)
         {
+            AudioManager.Instance.PlaySFXSound("snd_bloqué");
         }
         else
         {
@@ -468,6 +487,7 @@ public class PlayerMove : MonoBehaviour
         }
         else if (_mainGame.Map[CoordPlayer.x + 2, CoordPlayer.y] != 0)
         {
+            AudioManager.Instance.PlaySFXSound("snd_bloqué");
         }
         else
         {
@@ -492,6 +512,7 @@ public class PlayerMove : MonoBehaviour
         posPlayer = new Vector2(posPlayer.x, posPlayer.y + _mainGame.Distance);
         transform.position = posPlayer;
         CoordPlayer.y++;
+        AudioManager.Instance.PlaySFXSound("snd_player_walk");
     }
     public void MoveBoxDown()
     {
@@ -512,6 +533,7 @@ public class PlayerMove : MonoBehaviour
         posPlayer = new Vector2(posPlayer.x, posPlayer.y - _mainGame.Distance);
         transform.position = posPlayer;
         CoordPlayer.y--;
+        AudioManager.Instance.PlaySFXSound("snd_player_walk");
     }
     public void MoveBoxLeft()
     {
@@ -532,6 +554,7 @@ public class PlayerMove : MonoBehaviour
         posPlayer = new Vector2(posPlayer.x - _mainGame.Distance, posPlayer.y);
         transform.position = posPlayer;
         CoordPlayer.x--;
+        AudioManager.Instance.PlaySFXSound("snd_player_walk");
     }
     public void MoveBoxRight()
     {
@@ -552,6 +575,7 @@ public class PlayerMove : MonoBehaviour
         posPlayer = new Vector2(posPlayer.x + _mainGame.Distance, posPlayer.y);
         transform.position = posPlayer;
         CoordPlayer.x++;
+        AudioManager.Instance.PlaySFXSound("snd_player_walk");
     }
 
 

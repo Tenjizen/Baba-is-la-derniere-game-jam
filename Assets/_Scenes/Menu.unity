@@ -152,7 +152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33d9fa26457197046bd4f097eb84f5eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  imageFade: {fileID: 0}
+  Title: {fileID: 1655263456}
   accueil: {fileID: 411332849}
   parameter: {fileID: 768950306}
   controls: {fileID: 404186453}
@@ -337,7 +337,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3326102844019396812, guid: 13e2ade492a78e842b92ef3b469ea527, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3326102844019396812, guid: 13e2ade492a78e842b92ef3b469ea527, type: 3}
       propertyPath: m_AnchorMax.x
@@ -728,7 +728,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7558085247186149442, guid: 27887a5fdee6c1a4fab10fac8aaed69e, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7558085247186149442, guid: 27887a5fdee6c1a4fab10fac8aaed69e, type: 3}
       propertyPath: m_AnchorMax.x
@@ -1075,7 +1075,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -1172,7 +1172,22 @@ MonoBehaviour:
   mixer: {fileID: 24100000, guid: f75d10804a794db4daa3570071c8b902, type: 2}
   audioSourceMusic: {fileID: 730479312}
   audioSourceSFX: {fileID: 730479311}
-  audioClips: []
+  audioClips:
+  - {fileID: 8300000, guid: 773a3d3493e0f99418f990a829e9881d, type: 3}
+  - {fileID: 8300000, guid: e685700b90e181b4eb6f0d25b4ae24f9, type: 3}
+  - {fileID: 8300000, guid: 5fe307f212016d54fb43e612f3c09d26, type: 3}
+  - {fileID: 8300000, guid: 6e0d124550518ad49975fcc092e79b6b, type: 3}
+  - {fileID: 8300000, guid: e8e9363aef2a5824b9a9eacfaf629a86, type: 3}
+  - {fileID: 8300000, guid: f8aef8fc140d2cf45ac5b52955caa8e9, type: 3}
+  - {fileID: 8300000, guid: f7b9ff9b73cb2d04989a28c0093522a2, type: 3}
+  - {fileID: 8300000, guid: 7ec29736503d1474781995d558347734, type: 3}
+  - {fileID: 8300000, guid: 023957e00e0b3874abb3bccc171e4cce, type: 3}
+  - {fileID: 8300000, guid: 1d3af05511f1140458446a1c493c5d75, type: 3}
+  - {fileID: 8300000, guid: 67c6334372d520f41ba5fc4ac6f841b1, type: 3}
+  - {fileID: 8300000, guid: abc730eaa55cdc644abd614f6be6c00f, type: 3}
+  - {fileID: 8300000, guid: e4b82ad96af5bb542904f20c9adc0e1b, type: 3}
+  - {fileID: 8300000, guid: b78026d6c12e7a84aa08d868c1dff120, type: 3}
+  - {fileID: 8300000, guid: eb3d427123e4c3040996f7fefe2cd32c, type: 3}
   coroutine: 0
   m_sliderMusicValue: 0.5
   m_sliderSfxValue: 0.5
@@ -1407,7 +1422,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5103459788589556571, guid: f0d78aec4f9f4a14890dd2f39c3c94dc, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5103459788589556571, guid: f0d78aec4f9f4a14890dd2f39c3c94dc, type: 3}
       propertyPath: m_AnchorMax.x
@@ -1585,11 +1600,11 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 2067767859}
+  - {fileID: 1655263455}
   - {fileID: 411332848}
   - {fileID: 768950305}
   - {fileID: 1487298880}
   - {fileID: 404186452}
-  - {fileID: 1655263455}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1831,7 +1846,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6855056577446529053, guid: aace4f24fa3fad146aee0046c7a30d70, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6855056577446529053, guid: aace4f24fa3fad146aee0046c7a30d70, type: 3}
       propertyPath: m_AnchorMax.x
@@ -2125,7 +2140,7 @@ GameObject:
   - component: {fileID: 1655263457}
   - component: {fileID: 1655263456}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Title
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2143,11 +2158,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1122497422}
-  m_RootOrder: 5
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0000076293945, y: 315.4906}
+  m_AnchoredPosition: {x: 0, y: 315.4906}
   m_SizeDelta: {x: 1123.21, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1655263456

@@ -8,14 +8,24 @@ using DG.Tweening;
 public class MainMenu : MonoBehaviour
 {
 
-    public Image imageFade;
+    //public Image imageFade;
+
+    public Image Title;
+
     public GameObject accueil;
     public GameObject parameter;
     public GameObject controls;
     public GameObject credits;
 
     //public List<Interface> buttons;
-
+    private void Update()
+    {
+        if (accueil.gameObject.activeInHierarchy == true)
+            Title.enabled = true;
+        else
+            Title.enabled = false;
+    
+    }
     private void Awake()
     {
         accueil.SetActive(true);
@@ -23,7 +33,11 @@ public class MainMenu : MonoBehaviour
         controls.SetActive(false);
         credits.SetActive(false);
     }
+    private void Start()
+    {
+        StartCoroutine(AudioManager.Instance.IEPlayMusicSound("snd_music_menu"));
 
+    }
     public void OnClickPlay()
     {
 
@@ -32,9 +46,9 @@ public class MainMenu : MonoBehaviour
         //{
         //    buttons[i].Hide(0.1f);
         //}//Polish pas la
-        FadePlayComplete();//a taj si tu remet au dessus
-        AudioManager.Instance.audioSourceMusic.Stop();
-        
+        FadePlayComplete();//a tej si tu remet au dessus
+
+
     }
 
     void FadePlayComplete()
@@ -43,7 +57,7 @@ public class MainMenu : MonoBehaviour
     }
 
     public void OnClickParameter()
-    {   
+    {
         accueil.SetActive(false);
         parameter.SetActive(true);
     }
@@ -73,13 +87,13 @@ public class MainMenu : MonoBehaviour
     }
     public void OnClickLeave()
     {
-        #if UNITY_STANDALONE
+#if UNITY_STANDALONE
         Application.Quit();
-        #endif
+#endif
 
-        #if UNITY_EDITOR
+#if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
-        #endif
+#endif
     }
 
 }

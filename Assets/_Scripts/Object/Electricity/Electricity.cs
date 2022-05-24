@@ -26,6 +26,7 @@ public class Electricity : MonoBehaviour
     {
         if (Open)
         {
+
             SelfImage.enabled = true;
             switch (EnumState)
             {
@@ -98,6 +99,7 @@ public class Electricity : MonoBehaviour
         {
             if (player.CoordPlayer == CoordElectricity && !Open)
             {
+                AudioManager.Instance.PlaySFXSound("snd_electric_death");
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             }
         }
