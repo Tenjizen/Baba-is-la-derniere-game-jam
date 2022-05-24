@@ -1121,24 +1121,19 @@ MonoBehaviour:
   ListElectricity:
   - CoordBaseElectricity: {x: 1, y: 2}
     BaseOpen: 0
-    BaseHorizontal: 1
     EnumBaseState: 0
   - CoordBaseElectricity: {x: 2, y: 2}
     BaseOpen: 0
-    BaseHorizontal: 1
-    EnumBaseState: 0
+    EnumBaseState: 4
   - CoordBaseElectricity: {x: 3, y: 2}
     BaseOpen: 0
-    BaseHorizontal: 1
-    EnumBaseState: 0
+    EnumBaseState: 4
   - CoordBaseElectricity: {x: 4, y: 2}
     BaseOpen: 0
-    BaseHorizontal: 1
-    EnumBaseState: 0
+    EnumBaseState: 4
   - CoordBaseElectricity: {x: 5, y: 2}
     BaseOpen: 0
-    BaseHorizontal: 1
-    EnumBaseState: 0
+    EnumBaseState: 1
   ListSwitch:
   - CoordBaseSwitch: {x: 7, y: 2}
     target:

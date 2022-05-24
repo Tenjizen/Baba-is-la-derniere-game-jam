@@ -16,10 +16,11 @@ public class Electricity : MonoBehaviour
     public Vector2Int CoordElectricity;
 
     public bool Open;
-    public bool Horizontal;
+    private bool Horizontal;
 
     private void Start()
     {
+        Horizontal = true;
         _mainGame = FindObjectOfType<MainGame>();
     }
     private void Update()
@@ -55,10 +56,7 @@ public class Electricity : MonoBehaviour
                         SelfImage.sprite = SpriteOpen[7];
                     break;
                 case State.Middle:
-                    if (Horizontal)
-                        SelfImage.sprite = SpriteOpen[8];
-                    else
-                        SelfImage.sprite = SpriteOpen[9];
+                    SelfImage.enabled = false;
                     break;
             }
         }
@@ -91,7 +89,10 @@ public class Electricity : MonoBehaviour
                         SelfImage.sprite = SpriteClose[7];
                     break;
                 case State.Middle:
-                    SelfImage.enabled = false;
+                    if (Horizontal)
+                        SelfImage.sprite = SpriteClose[8];
+                    else
+                        SelfImage.sprite = SpriteClose[9];
                     break;
             }
         }

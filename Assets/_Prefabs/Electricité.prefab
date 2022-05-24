@@ -80,7 +80,7 @@ SpriteRenderer:
   m_Size: {x: 0.64, y: 0.64}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &-1955653524562676599
@@ -99,25 +99,26 @@ MonoBehaviour:
   _mainGame: {fileID: 0}
   SelfImage: {fileID: 2438950432897647148}
   SpriteOpen:
-  - {fileID: 21300000, guid: 83132e9424e26ec4ea1f04e3ee0ea3a5, type: 3}
-  - {fileID: 21300000, guid: 03f154ca53e771142ac2d40292a841c5, type: 3}
-  - {fileID: 21300000, guid: 8de9c0abc29409b4289bf437a22b7eb7, type: 3}
-  - {fileID: 21300000, guid: c13905511275b084da7ad5043b86ef13, type: 3}
-  - {fileID: 21300000, guid: a0040101793acb84887fa8c79c5e07a3, type: 3}
-  - {fileID: 21300000, guid: 738653fe3a38ac343a901cd5ecea5be1, type: 3}
-  - {fileID: 21300000, guid: ec87d4c9bd0fc95479d828d342c5b06a, type: 3}
-  - {fileID: 21300000, guid: 5e8586191431b2748930cdb9bec55520, type: 3}
-  - {fileID: 21300000, guid: 45ba7fa654f98374cbf6e6f7cd5e9974, type: 3}
-  - {fileID: 21300000, guid: 5912af245491c6a4886752adcc29417a, type: 3}
+  - {fileID: 21300000, guid: 45b19516d6355a8429d8533bc5aa0432, type: 3}
+  - {fileID: 21300000, guid: 84cc77693c6e7854aae63a738b48ed7d, type: 3}
+  - {fileID: 21300000, guid: 0eb81788d57cdf14f90909c551adbf31, type: 3}
+  - {fileID: 21300000, guid: 680becaa5fe99cf4b8aee5c3f35dadef, type: 3}
+  - {fileID: 21300000, guid: 84cc77693c6e7854aae63a738b48ed7d, type: 3}
+  - {fileID: 21300000, guid: 84cc77693c6e7854aae63a738b48ed7d, type: 3}
+  - {fileID: 21300000, guid: 680becaa5fe99cf4b8aee5c3f35dadef, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   SpriteClose:
-  - {fileID: 21300000, guid: bf00c4d0604e19a419007d03703f8695, type: 3}
-  - {fileID: 21300000, guid: d3e4bee4326917142a020eb5eefca8bf, type: 3}
-  - {fileID: 21300000, guid: 0352bf6177602d84ea6e980f4b335bc0, type: 3}
-  - {fileID: 21300000, guid: 07e8c4365bb226448b40ca77692195a5, type: 3}
-  - {fileID: 21300000, guid: 00292f7d508a0f74cab328b7839d9f5f, type: 3}
-  - {fileID: 21300000, guid: 86554d371b0629247beaf8f47c2dab6d, type: 3}
-  - {fileID: 21300000, guid: 28bdf5fef5ab25b4dae54661a05d0bdd, type: 3}
-  - {fileID: 21300000, guid: 8e04a70d42fbc6142a7d2a57549064a3, type: 3}
+  - {fileID: 21300000, guid: 3267c2ba36309f0459c473d508ca6373, type: 3}
+  - {fileID: 21300000, guid: 25a8bc5755505f44aa94fdbb6e71dec8, type: 3}
+  - {fileID: 21300000, guid: 3d36600e87bfe5045bad2c718f44f1de, type: 3}
+  - {fileID: 21300000, guid: 91b7b8ae14279124fbcc8cb225db85fc, type: 3}
+  - {fileID: 21300000, guid: 25a8bc5755505f44aa94fdbb6e71dec8, type: 3}
+  - {fileID: 21300000, guid: 25a8bc5755505f44aa94fdbb6e71dec8, type: 3}
+  - {fileID: 21300000, guid: 91b7b8ae14279124fbcc8cb225db85fc, type: 3}
+  - {fileID: 21300000, guid: f2bf74432f99aa948b915ce7c5e9ade5, type: 3}
+  - {fileID: 21300000, guid: ea1885ccd21c8a4468f6de002fb43ef5, type: 3}
+  - {fileID: 21300000, guid: f2bf74432f99aa948b915ce7c5e9ade5, type: 3}
   CoordElectricity: {x: 0, y: 0}
   Open: 0
-  Horizontal: 0

@@ -219,7 +219,6 @@ public class MainGame : MonoBehaviour
 
             Electricity[i].CoordElectricity = ListElectricity[i].CoordBaseElectricity;
             Electricity[i].Open = ListElectricity[i].BaseOpen;
-            Electricity[i].Horizontal = ListElectricity[i].BaseHorizontal;
 
             var enumTreadmill = (int)ListElectricity[i].EnumBaseState;
             Electricity[i].EnumState = 0;

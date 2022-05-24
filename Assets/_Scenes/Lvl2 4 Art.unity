@@ -1117,16 +1117,13 @@ MonoBehaviour:
   ListElectricity:
   - CoordBaseElectricity: {x: 5, y: 11}
     BaseOpen: 0
-    BaseHorizontal: 1
     EnumBaseState: 0
   - CoordBaseElectricity: {x: 6, y: 11}
     BaseOpen: 0
-    BaseHorizontal: 1
-    EnumBaseState: 0
+    EnumBaseState: 4
   - CoordBaseElectricity: {x: 7, y: 11}
     BaseOpen: 0
-    BaseHorizontal: 1
-    EnumBaseState: 0
+    EnumBaseState: 1
   ListSwitch:
   - CoordBaseSwitch: {x: 10, y: 10}
     target:
